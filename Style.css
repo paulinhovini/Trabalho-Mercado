@@ -1,0 +1,97 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+   ============================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==============================
+   NAVBAR
+   ============================== */
+
+.navbar {
+    background-color: #1B22A7;
+}
+
+.nav-menu {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+}
+
+.nav-menu:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* ==============================
+   BOTÃO BUSCAR
+   ============================== */
+
+.btn-buscar {
+    background-color: #FAFAFA;
+    color: #1B22A7;
+    border: 1px solid #FAFAFA;
+}
+
+.btn-buscar:hover {
+    background-color: #1B22A7;
+    color: #FAFAFA;
+    border-color: #FAFAFA;
+}
+
+
+/* ==============================
+   PRODUTOS
+   ============================== */
+
+.btn-produto {
+    background-color: #1B22A7;
+    color: #FAFAFA;
+    border: 1px solid #1B22A7;
+}
+
+.btn-produto:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+    border-color: #4260E6;
+}
+
+
+/* ==============================
+   CARDS
+   ============================== */
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    font-weight: 700;
+}
