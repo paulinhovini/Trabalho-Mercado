@@ -19,169 +19,185 @@
 <body>
 
     <main>
-        <main>
-
-            <nav class="navbar py-4" style="background-color: #1B22A7;">
-
-                <div class="container-fluid d-flex align-items-center">
-
-                    <div class="d-flex align-items-center">
-
-                        <a class="navbar-brand fw-bold text-light" href="index.html">
-                            Mercado Zona Norte
-                        </a>
-
-                        <form class="d-flex ms-3" role="search">
-
-                            <input class="form-control me-2" type="search" placeholder="Pesquise aqui"
-                                aria-label="Pesquisar">
-
-                            <button type="submit" class="btn btn-buscar">
-                                Buscar
-                            </button>
-
-                        </form>
-
-                    </div>
-
-                    <div class="d-flex align-items-center ms-auto">
-
-                        <a class="nav-menu" href="#">
-                            <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
-                            <span>Ofertas</span>
-                        </a>
-
-                        <a class="nav-menu" href="#">
-                            <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
-                            <span>Clube</span>
-                        </a>
-
-                        <a class="nav-menu" href="#">
-                            <img src="ícones/Login.svg" alt="Login e Cadastro" class="nav-icon">
-                            <span>Login/Cadastro</span>
-                        </a>
-
-                    </div>
-
-                </div>
-            </nav>
-
-
-            <div id="carouselExample" class="carousel slide">
-
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <img src="Imagens/Banners/banner-1.jpg" class="d-block w-100" alt="Ofertas do Mercado Zona Norte">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="Imagens/Banners/banner-2.jpg" class="d-block w-100" alt="Ofertas especiais">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="Imagens/Banners/banner-3.jpg" class="d-block w-100" alt="Promoções do mercado">
-                    </div>
-
+        <nav class="navbar py-4 navbar-expand-md" style="background-color: #1B22A7;">
+           <div class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
+              <div class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
+                    <a class="navbar-brand fw-bold text-light" href="index.html">
+                        Mercado Zona Norte
+                    </a>
+                    <form class="d-flex ms-md-3 w-100 w-md-auto" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquise aqui"
+                            aria-label="Pesquisar">
+                        <button type="submit" class="btn btn-buscar">
+                            Buscar
+                        </button>
+                    </form>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
+ <div class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
+                    <a class="nav-menu" href="#">
+                        <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
+                        <span>Ofertas</span>
+                    </a>
+                    <a class="nav-menu" href="#">
+                        <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
+                        <span>Clube</span>
+                    </a>
+                </div>
+            </div>
+            
+        </nav>
 
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
-
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
-
-                </button>
-
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Imagens/Banners/banner-1.jpg" class="d-block w-100" alt="Ofertas do Mercado Zona Norte">
+                </div>
+                <div class="carousel-item">
+                    <img src="Imagens/Banners/banner-2.jpg" class="d-block w-100" alt="Ofertas especiais">
+                </div>
+                <div class="carousel-item">
+                    <img src="Imagens/Banners/banner-3.jpg" class="d-block w-100" alt="Promoções do mercado">
+                </div>
             </div>
 
-            <section class="container py-5">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
 
-                <div class="row g-4">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
 
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="Imagens/Cards/Picanha.jpg" class="card-img-top" alt="">
+        </div>
 
-                            <div class="card-body">
-                                <h5 class="card-title">Picanha Peça Resfriada Maturatta Friboi 1,6kg</h5>
+        <section class="container py-5">
 
-                                <p class="card-text">
-                                    R$ 217,58
-                                </p>
+            <div class="row g-4">
 
-                                <a href="#" class="btn btn-produto">
-                                    COMPRAR
-                                </a>
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="Imagens/Cards/Picanha.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Picanha Peça Resfriada Maturatta Friboi</h5>
+                            <p class="card-text">R$ 169,99</p>
+                            <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="Imagens/Cards/Queijo.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Queijo Minas Padrão Itambé Fracionado</h5>
+                            <p class="card-text">R$ 40,50</p>
+                            <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="Imagens/Cards/Ovos.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Ovos Brancos Grandes Mantiqueira c/ 20 Unidades</h5>
+                            <p class="card-text">R$ 12,99 </p>
+                            <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="Imagens/Cards/Suco.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Suco Aurora Integral Uva Tinto Caixa 1.5 Litros</h5>
+                            <p class="card-text">R$ 25,49</p>
+                            <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="container py-5">
+            <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner w-75 mx-auto py-2">
+
+                    <div class="carousel-item active">
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <div class="rounded-4 overflow-hidden">
+                                    <img src="Imagens/Banners/banner-4.jpg" class="d-block w-100"
+                                        alt="Ofertas do Mercado Zona Norte">
+                                </div>
                             </div>
+
+                           <div class="col-12 col-md-6">
+                                <div class="rounded-4 overflow-hidden">
+                                    <img src="Imagens/Banners/banner-5.jpg" class="d-block w-100"
+                                        alt="Ofertas do Mercado Zona Norte">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+             </div>
+     </section>
+
+        <footer class="footer-site text-light py-4 mt-5">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                         <a href="sobre.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
+                        </a> </div>
+
+                   <div class="col-12 col-md-4 text-center text-md-start">
+                        <h6 class="fw-bold text-uppercase mb-2">Central de Atendimento</h6>
+
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+                            <img src="ícones/telefone.svg" alt="Telefone" class="footer-icon me-2">
+                            <span class="small">(21) 99999-9999</span>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                            <img src="ícones/email.svg" alt="E-mail" class="footer-icon me-2">
+                            <span class="small">atendimento@mercadozonanorte.com.br</span>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                             <img src="Imagens/Cards/Picanha.jpg" class="card-img-top" alt="">
-
-                            <div class="card-body">
-                                <h5 class="card-title">Picanha Peça Resfriada Maturatta Friboi 1,6kg</h5>
-
-                                <p class="card-text">
-                                    R$ 217,58
-                                </p>
-
-                                <a href="#" class="btn btn-produto">
-                                    COMPRAR
-                                </a>
-                            </div>
+                   <div class="col-12 col-md-4 text-center text-md-start">
+                        <h6 class="fw-bold text-uppercase mb-2">Acompanhe o Zona Norte nas redes sociais</h6>
+                       <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                            <a href="#" class="social-link d-flex align-items-center gap-2">
+                                <img src="ícones/facebook.svg" alt="Facebook" class="footer-icon">
+                                <span class="small">Facebook</span>
+                            </a>
+                            <a href="#" class="social-link d-flex align-items-center gap-2">
+                                <img src="ícones/instagram.svg" alt="Instagram" class="footer-icon">
+                                <span class="small">Instagram</span>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="Imagens/Cards/Picanha.jpg" class="card-img-top" alt="">
+                </div>
 
-                            <div class="card-body">
-                                <h5 class="card-title">Picanha Peça Resfriada Maturatta Friboi 1,6kg</h5>
+                <hr>
 
-                                <p class="card-text">
-                                    R$ 217,58
-                                </p>
+                <div class="text-center small opacity-75">
+                    &copy; 2026 Mercado Zona Norte. Todos os direitos reservados.
+                </div>
+            </div>
+        </footer>
 
-                                <a href="#" class="btn btn-produto">
-                                    COMPRAR
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="Imagens/Cards/Picanha.jpg" class="card-img-top" alt="">
-
-                            <div class="card-body">
-                                <h5 class="card-title">Picanha Peça Resfriada Maturatta Friboi 1,6kg</h5>
-
-                                <p class="card-text">
-                                    R$ 217,58
-                                </p>
-
-                                <a href="#" class="btn btn-produto">
-                                    COMPRAR
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-            </section>
-
-        </main>
+    </main>
 
 </body>
 
