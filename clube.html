@@ -1,234 +1,1057 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clube | Mercado</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ============ INÍCIO DO CSS DO CLUBE (tudo com prefixo .clube, não conflita com o resto do site) ============ -->
-<style>
-.clube{--c-ink:#12303a;--c-mid:#2e8b57;--c-sun:#ffc93c;--c-red:#d93a2b;--c-bg:#f2f6f7;--c-line:#d5e0e3;
-  font-family:'Outfit',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--c-ink);line-height:1.5;background:#fff}
-.clube *{box-sizing:border-box}
-.clube h1,.clube h2,.clube h3,.clube p{margin:0}
-.clube a{color:inherit}
-.clube .c-wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.clube section{padding:64px 0}
-.clube h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
-.clube .c-sub{color:#48626b;max-width:60ch;margin-bottom:32px}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Paginas.css">
+    <link rel="stylesheet" href="clube.css">
 
-/* Hero */
-.clube .c-hero{background:var(--c-ink);color:#fff;padding:72px 0}
-.clube .c-hero .c-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.clube .c-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}
-.clube .c-hero p{color:#c6d8dd;max-width:46ch;margin-bottom:28px;font-size:1.1rem}
-.clube .c-btn{display:inline-block;background:var(--c-sun);color:var(--c-ink);font:inherit;font-weight:700;border:0;border-radius:999px;padding:14px 28px;cursor:pointer;text-decoration:none;transition:transform .15s}
-.clube .c-btn:hover{transform:translateY(-2px)}
-.clube .c-btn:focus-visible,.clube .c-chip:focus-visible,.clube summary:focus-visible,.clube input:focus-visible{outline:3px solid var(--c-sun);outline-offset:3px}
-.clube .c-ghost{margin-left:12px;color:#fff;font-weight:600}
-.clube .c-card{aspect-ratio:1.6;max-width:420px;margin-left:auto;width:100%;border-radius:22px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;
-  background:linear-gradient(135deg,var(--c-mid),#1b5e3a);box-shadow:0 24px 50px rgba(0,0,0,.35);transform:rotate(-4deg)}
-.clube .c-card b{font-size:1.5rem;letter-spacing:-.01em}
-.clube .c-chip-ico{width:46px;height:34px;border-radius:7px;background:linear-gradient(135deg,#ffe18a,var(--c-sun))}
-.clube .c-card small{color:#d3efdf;letter-spacing:.12em}
+    <title>Clube Zona Norte | Mercado Zona Norte</title>
 
-/* Benefícios */
-.clube .c-ben{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
-.clube .c-ben li{list-style:none;display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--c-line)}
-.clube .c-ben{padding:0;margin:0}
-.clube .c-ico{flex:none;width:48px;height:48px;border-radius:14px;background:var(--c-bg);display:grid;place-items:center;font-size:1.5rem}
-.clube .c-ben h3{font-size:1.1rem;margin-bottom:2px}
-.clube .c-ben p{color:#48626b;font-size:.97rem}
-
-/* Promoções + categorias */
-.clube .c-promo{background:var(--c-bg)}
-.clube .c-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
-.clube .c-chip{font:inherit;font-weight:600;background:#fff;color:var(--c-ink);border:1.5px solid var(--c-line);border-radius:999px;padding:9px 18px;cursor:pointer}
-.clube .c-chip[aria-pressed="true"]{background:var(--c-ink);color:#fff;border-color:var(--c-ink)}
-.clube .c-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
-.clube .c-prod{background:#fff;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px;position:relative;border:1px solid var(--c-line)}
-.clube .c-emoji{font-size:3rem;line-height:1;margin-bottom:6px}
-.clube .c-prod h3{font-size:1rem}
-.clube .c-cat{font-size:.85rem;color:#5b747c}
-.clube .c-off{position:absolute;top:14px;right:14px;background:var(--c-red);color:#fff;font-weight:700;font-size:.8rem;border-radius:8px;padding:3px 8px}
-.clube .c-old{text-decoration:line-through;color:#7a9098;font-size:.9rem;margin-top:auto}
-.clube .c-new{font-size:1.5rem;font-weight:800;color:var(--c-mid);letter-spacing:-.02em}
-.clube .c-new small{font-size:.8rem;font-weight:600;color:#48626b;letter-spacing:0}
-.clube .c-empty{color:#48626b}
-
-/* Informações */
-.clube .c-info .c-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.clube .c-steps{padding:0;margin:0;counter-reset:s}
-.clube .c-steps li{list-style:none;counter-increment:s;display:flex;gap:16px;margin-bottom:22px}
-.clube .c-steps li::before{content:counter(s);flex:none;width:36px;height:36px;border-radius:50%;background:var(--c-sun);font-weight:800;display:grid;place-items:center}
-.clube .c-steps h3{font-size:1.05rem}
-.clube .c-steps p{color:#48626b;font-size:.97rem}
-.clube details{border-top:1px solid var(--c-line);padding:16px 0}
-.clube details:last-of-type{border-bottom:1px solid var(--c-line)}
-.clube summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
-.clube summary::after{content:'+';font-size:1.3rem;line-height:1}
-.clube details[open] summary::after{content:'–'}
-.clube details p{margin-top:8px;color:#48626b}
-
-/* Cadastro */
-.clube .c-join{background:var(--c-ink);color:#fff;text-align:center}
-.clube .c-join .c-sub{color:#c6d8dd;margin-inline:auto}
-.clube .c-form{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:640px;margin:0 auto}
-.clube .c-form input{flex:1 1 200px;font:inherit;padding:14px 18px;border-radius:999px;border:0;color:var(--c-ink)}
-.clube .c-msg{margin-top:16px;min-height:1.5em;font-weight:600;color:var(--c-sun)}
-
-@media(max-width:800px){
-  .clube .c-hero .c-wrap,.clube .c-info .c-wrap,.clube .c-ben{grid-template-columns:1fr}
-  .clube .c-card{margin:12px auto 0;transform:none}
-  .clube section{padding:48px 0}
-}
-</style>
-<!-- ============ FIM DO CSS DO CLUBE ============ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
-<body style="margin:0">
 
-<!-- ============ INÍCIO DO HTML DO CLUBE (copie de <main> até </main>) ============ -->
-<main class="clube" id="clube">
+<body>
 
-  <header class="c-hero">
-    <div class="c-wrap">
-      <div>
-        <h1>Pague menos nas compras que você já faz.</h1>
-        <p>Entre para o Clube e tenha preço de sócio em centenas de produtos, cashback em toda compra e ofertas antes de todo mundo.</p>
-        <a class="c-btn" href="#c-cadastro">Quero ser sócio</a>
-        <a class="c-ghost" href="#c-promocoes">Ver ofertas</a>
-      </div>
-      <div class="c-card" aria-hidden="true">
-        <div class="c-chip-ico"></div>
-        <div><b>Clube Mercado</b><br><small>SÓCIO 0000 0000</small></div>
-      </div>
-    </div>
-  </header>
+    <main>
 
-  <section id="c-beneficios">
-    <div class="c-wrap">
-      <h2>Benefícios de ser sócio</h2>
-      <p class="c-sub">Sem mensalidade e sem letra miúda: quanto mais você compra, mais o Clube devolve.</p>
-      <ul class="c-ben">
-        <li><span class="c-ico" aria-hidden="true">🏷️</span><div><h3>Preço de sócio</h3><p>Descontos exclusivos em produtos selecionados, todos os dias da semana.</p></div></li>
-        <li><span class="c-ico" aria-hidden="true">💰</span><div><h3>Cashback de 3%</h3><p>Uma parte de cada compra volta como saldo para usar na próxima.</p></div></li>
-        <li><span class="c-ico" aria-hidden="true">⏰</span><div><h3>Ofertas antecipadas</h3><p>Sócios recebem as promoções da semana 24 horas antes do público geral.</p></div></li>
-        <li><span class="c-ico" aria-hidden="true">🚚</span><div><h3>Entrega grátis</h3><p>Frete zero em pedidos acima de R$ 120 dentro da sua região.</p></div></li>
-        <li><span class="c-ico" aria-hidden="true">🎂</span><div><h3>Cupom de aniversário</h3><p>No mês do seu aniversário, um cupom de desconto na sua compra.</p></div></li>
-        <li><span class="c-ico" aria-hidden="true">📄</span><div><h3>Nota com CPF</h3><p>Acompanhe suas compras e seu saldo de cashback em um só lugar.</p></div></li>
-      </ul>
-    </div>
-  </section>
+        <!-- MENU -->
+        <nav class="navbar py-4 navbar-expand-md" style="background-color: #1B22A7;">
+            <div
+                class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
 
-  <section class="c-promo" id="c-promocoes">
-    <div class="c-wrap">
-      <h2>Produtos em promoção para sócios</h2>
-      <p class="c-sub">Escolha uma categoria para ver só o que interessa.</p>
-      <div class="c-tabs" id="c-tabs" role="group" aria-label="Categorias de produtos"></div>
-      <div class="c-grid" id="c-grid" aria-live="polite"></div>
-    </div>
-  </section>
+                <div
+                    class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
 
-  <section class="c-info" id="c-informacoes">
-    <div class="c-wrap">
-      <div>
-        <h2>Como participar</h2>
-        <p class="c-sub">Em três passos você já aproveita.</p>
-        <ol class="c-steps">
-          <li><div><h3>Faça seu cadastro</h3><p>Preencha nome e e-mail no formulário abaixo. Leva menos de um minuto.</p></div></li>
-          <li><div><h3>Informe seu CPF no caixa</h3><p>É só falar o CPF ao finalizar a compra para ativar o preço de sócio.</p></div></li>
-          <li><div><h3>Acumule e economize</h3><p>O cashback cai no seu saldo e pode ser usado na compra seguinte.</p></div></li>
-        </ol>
-      </div>
-      <div>
-        <h2>Perguntas frequentes</h2>
-        <p class="c-sub">O essencial sobre o programa.</p>
-        <details><summary>O Clube tem custo?</summary><p>Não. O cadastro é gratuito e não há mensalidade.</p></details>
-        <details><summary>Como uso meu cashback?</summary><p>O saldo é abatido automaticamente na próxima compra, informando seu CPF no caixa.</p></details>
-        <details><summary>Quanto tempo o saldo fica válido?</summary><p>O cashback vale por 60 dias a partir da data da compra.</p></details>
-        <details><summary>As ofertas valem nas compras online?</summary><p>Sim. Os preços de sócio aparecem tanto na loja física quanto no site.</p></details>
-      </div>
-    </div>
-  </section>
+                    <a class="navbar-brand fw-bold text-light" href="Index.html">
+                        Mercado Zona Norte
+                    </a>
 
-  <section class="c-join" id="c-cadastro">
-    <div class="c-wrap">
-      <h2>Entre para o Clube</h2>
-      <p class="c-sub">Cadastro gratuito. Comece a economizar na próxima compra.</p>
-      <form class="c-form" id="c-form">
-        <input type="text" id="c-nome" placeholder="Seu nome" required aria-label="Seu nome">
-        <input type="email" id="c-email" placeholder="Seu e-mail" required aria-label="Seu e-mail">
-        <button class="c-btn" type="submit">Quero ser sócio</button>
-      </form>
-      <p class="c-msg" id="c-msg" role="status"></p>
-    </div>
-  </section>
+                    <form class="d-flex ms-md-3 w-100 w-md-auto" role="search">
 
-</main>
-<!-- ============ FIM DO HTML DO CLUBE ============ -->
+                        <input class="form-control me-2"
+                            type="search"
+                            placeholder="Pesquise aqui"
+                            aria-label="Pesquisar">
 
-<!-- ============ INÍCIO DO JS DO CLUBE ============ -->
-<script>
-(function () {
-  var produtos = [
-    { nome: 'Arroz tipo 1 5kg', cat: 'Mercearia', emoji: '🍚', de: 32.90, por: 26.90 },
-    { nome: 'Feijão carioca 1kg', cat: 'Mercearia', emoji: '🫘', de: 9.49, por: 7.49 },
-    { nome: 'Café torrado 500g', cat: 'Mercearia', emoji: '☕', de: 24.90, por: 19.90 },
-    { nome: 'Banana prata (kg)', cat: 'Hortifruti', emoji: '🍌', de: 6.99, por: 4.99 },
-    { nome: 'Tomate (kg)', cat: 'Hortifruti', emoji: '🍅', de: 8.99, por: 6.49 },
-    { nome: 'Peito de frango (kg)', cat: 'Açougue', emoji: '🍗', de: 16.90, por: 13.90 },
-    { nome: 'Carne moída (kg)', cat: 'Açougue', emoji: '🥩', de: 39.90, por: 34.90 },
-    { nome: 'Pão de forma 500g', cat: 'Padaria e frios', emoji: '🍞', de: 9.90, por: 7.90 },
-    { nome: 'Queijo mussarela (kg)', cat: 'Padaria e frios', emoji: '🧀', de: 45.90, por: 39.90 },
-    { nome: 'Detergente 500ml', cat: 'Limpeza', emoji: '🧴', de: 3.29, por: 2.49 },
-    { nome: 'Sabão em pó 1,6kg', cat: 'Limpeza', emoji: '🧺', de: 24.90, por: 19.90 },
-    { nome: 'Shampoo 350ml', cat: 'Higiene', emoji: '🧼', de: 17.90, por: 12.90 }
-  ];
-  var cats = ['Todas'].concat(produtos.map(function (p) { return p.cat; }).filter(function (c, i, a) { return a.indexOf(c) === i; }));
-  var ativa = 'Todas';
-  var tabs = document.getElementById('c-tabs');
-  var grid = document.getElementById('c-grid');
-  function brl(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+                        <button type="submit" class="btn btn-buscar">
+                            Buscar
+                        </button>
 
-  function renderTabs() {
-    tabs.innerHTML = '';
-    cats.forEach(function (c) {
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'c-chip';
-      b.textContent = c;
-      b.setAttribute('aria-pressed', c === ativa);
-      b.onclick = function () { ativa = c; renderTabs(); renderGrid(); };
-      tabs.appendChild(b);
-    });
-  }
+                    </form>
 
-  function renderGrid() {
-    var lista = produtos.filter(function (p) { return ativa === 'Todas' || p.cat === ativa; });
-    if (!lista.length) { grid.innerHTML = '<p class="c-empty">Nenhuma oferta nesta categoria agora.</p>'; return; }
-    grid.innerHTML = lista.map(function (p) {
-      var pct = Math.round((1 - p.por / p.de) * 100);
-      return '<article class="c-prod"><span class="c-off">-' + pct + '%</span>' +
-        '<div class="c-emoji" aria-hidden="true">' + p.emoji + '</div>' +
-        '<h3>' + p.nome + '</h3><span class="c-cat">' + p.cat + '</span>' +
-        '<span class="c-old">' + brl(p.de) + '</span>' +
-        '<span class="c-new">' + brl(p.por) + ' <small>sócio</small></span></article>';
-    }).join('');
-  }
+                </div>
 
-  document.getElementById('c-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var nome = document.getElementById('c-nome').value.trim().split(' ')[0];
-    document.getElementById('c-msg').textContent = 'Cadastro recebido, ' + nome + '! Você já pode aproveitar o preço de sócio.';
-    this.reset();
-  });
+                <div
+                    class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
 
-  renderTabs();
-  renderGrid();
-})();
-</script>
-<!-- ============ FIM DO JS DO CLUBE ============ -->
+                    <a class="nav-menu" href="ofertas.html">
+
+                        <img src="ícones/Cupom.svg"
+                            alt="Ofertas"
+                            class="nav-icon">
+
+                        <span>Ofertas</span>
+
+                    </a>
+
+                    <a class="nav-menu ativo" href="clube.html">
+
+                        <img src="ícones/Clube.svg"
+                            alt="Clube"
+                            class="nav-icon">
+
+                        <span>Clube</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!-- CABEÇALHO -->
+        <section class="cabecalho-pagina">
+
+            <div class="container text-center">
+
+                <h1 class="display-5">
+                    Clube Zona Norte
+                </h1>
+
+                <p>
+                    Cadastre-se gratuitamente e economize em todas as suas compras.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFÍCIOS DE SER MEMBRO -->
+        <section class="container py-5" id="beneficios">
+
+            <h2 class="titulo-secao">
+                Benefícios de ser membro
+            </h2>
+
+            <div class="row g-4">
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-beneficio">
+
+                        <div class="icone-beneficio">
+                            🏷️
+                        </div>
+
+                        <h5>
+                            Preços exclusivos
+                        </h5>
+
+                        <p class="mb-0">
+                            Produtos selecionados com preço especial
+                            que só quem é do Clube encontra.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-beneficio">
+
+                        <div class="icone-beneficio">
+                            🎟️
+                        </div>
+
+                        <h5>
+                            Cupons toda semana
+                        </h5>
+
+                        <p class="mb-0">
+                            Receba cupons de desconto novos a cada semana
+                            direto no seu cadastro.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-beneficio">
+
+                        <div class="icone-beneficio">
+                            ⭐
+                        </div>
+
+                        <h5>
+                            Acúmulo de pontos
+                        </h5>
+
+                        <p class="mb-0">
+                            A cada compra você soma pontos e troca por
+                            descontos nas próximas compras.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-beneficio">
+
+                        <div class="icone-beneficio">
+                            🎂
+                        </div>
+
+                        <h5>
+                            Presente de aniversário
+                        </h5>
+
+                        <p class="mb-0">
+                            No mês do seu aniversário, você ganha um
+                            desconto especial para comemorar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-beneficio">
+
+                        <div class="icone-beneficio">
+                            🔔
+                        </div>
+
+                        <h5>
+                            Ofertas em primeira mão
+                        </h5>
+
+                        <p class="mb-0">
+                            Fique sabendo das promoções antes de todo mundo
+                            e garanta os melhores itens.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-beneficio">
+
+                        <div class="icone-beneficio">
+                            💙
+                        </div>
+
+                        <h5>
+                            100% gratuito
+                        </h5>
+
+                        <p class="mb-0">
+                            Sem taxa de adesão e sem mensalidade.
+                            Basta se cadastrar e aproveitar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUTOS EM PROMOÇÃO PARA MEMBROS -->
+        <section class="container pb-5" id="promocoes">
+
+            <h2 class="titulo-secao">
+                Produtos em promoção para membros
+            </h2>
+
+            <div class="row g-4">
+
+
+                <!-- PRODUTO 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card card-oferta">
+
+                        <span class="selo-membro">
+                            Membro
+                        </span>
+
+                        <img src="Imagens/Cards/Picanha.jpg"
+                            class="card-img-top"
+                            alt="Picanha Peça Resfriada Maturatta Friboi">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Picanha Peça Resfriada Maturatta Friboi
+                            </h5>
+
+                            <p class="preco-antigo">
+                                preço normal
+                                <del>R$ 169,99</del>
+                            </p>
+
+                            <p class="preco-membro">
+                                R$ 159,99
+                            </p>
+
+                            <a href="#" class="btn btn-produto">
+                                VER PRODUTO
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card card-oferta">
+
+                        <span class="selo-membro">
+                            Membro
+                        </span>
+
+                        <img src="Imagens/Cards/Queijo.jpg"
+                            class="card-img-top"
+                            alt="Queijo Minas Padrão Itambé Fracionado">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Queijo Minas Padrão Itambé Fracionado
+                            </h5>
+
+                            <p class="preco-antigo">
+                                preço normal
+                                <del>R$ 40,50</del>
+                            </p>
+
+                            <p class="preco-membro">
+                                R$ 36,90
+                            </p>
+
+                            <a href="#" class="btn btn-produto">
+                                VER PRODUTO
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card card-oferta">
+
+                        <span class="selo-membro">
+                            Membro
+                        </span>
+
+                        <img src="Imagens/Cards/Ovos.jpg"
+                            class="card-img-top"
+                            alt="Ovos Brancos Grandes Mantiqueira com 20 unidades">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Ovos Brancos Grandes Mantiqueira c/ 20 Unidades
+                            </h5>
+
+                            <p class="preco-antigo">
+                                preço normal
+                                <del>R$ 12,99</del>
+                            </p>
+
+                            <p class="preco-membro">
+                                R$ 10,99
+                            </p>
+
+                            <a href="#" class="btn btn-produto">
+                                VER PRODUTO
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card card-oferta">
+
+                        <span class="selo-membro">
+                            Membro
+                        </span>
+
+                        <img src="Imagens/Cards/Suco.jpg"
+                            class="card-img-top"
+                            alt="Suco Aurora Integral Uva Tinto Caixa 1.5 Litros">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Suco Aurora Integral Uva Tinto Caixa 1.5 Litros
+                            </h5>
+
+                            <p class="preco-antigo">
+                                preço normal
+                                <del>R$ 25,49</del>
+                            </p>
+
+                            <p class="preco-membro">
+                                R$ 22,90
+                            </p>
+
+                            <a href="#" class="btn btn-produto">
+                                VER PRODUTO
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="small text-muted mt-3 mb-0">
+                Preços exclusivos para membros do Clube Zona Norte,
+                válidos de 21/09 a 27/09/2026 ou enquanto durarem os estoques.
+            </p>
+
+        </section>
+
+
+        <!-- CATEGORIAS DE PRODUTOS -->
+        <section class="container pb-5" id="categorias">
+
+            <h2 class="titulo-secao">
+                Categorias de produtos
+            </h2>
+
+            <p>
+                Encontre descontos de membro em todos os corredores do mercado:
+            </p>
+
+            <div class="row g-3">
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🥩
+                        </span>
+
+                        Açougue
+
+                        <small>
+                            Carnes e aves
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🧀
+                        </span>
+
+                        Frios e Laticínios
+
+                        <small>
+                            Queijos, leites e iogurtes
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🥬
+                        </span>
+
+                        Hortifruti
+
+                        <small>
+                            Frutas, verduras e legumes
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🥤
+                        </span>
+
+                        Bebidas
+
+                        <small>
+                            Refrigerantes, sucos e águas
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🧼
+                        </span>
+
+                        Limpeza
+
+                        <small>
+                            Produtos para sua casa
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🍞
+                        </span>
+
+                        Padaria
+
+                        <small>
+                            Pães, bolos e doces
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🥫
+                        </span>
+
+                        Mercearia
+
+                        <small>
+                            Alimentos e enlatados
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <a href="#" class="card-categoria">
+
+                        <span class="icone-categoria">
+                            🧴
+                        </span>
+
+                        Higiene
+
+                        <small>
+                            Cuidados pessoais
+                        </small>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMAÇÕES SOBRE O PROGRAMA -->
+        <section class="container pb-5" id="como-funciona">
+
+            <div class="row g-4">
+
+                <div class="col-12 col-lg-7">
+
+                    <div class="caixa-info h-100">
+
+                        <h2 class="titulo-secao">
+                            Como funciona o Clube?
+                        </h2>
+
+                        <p>
+                            O Clube Zona Norte é gratuito e foi criado para
+                            oferecer vantagens exclusivas aos nossos clientes.
+                        </p>
+
+                        <div class="row g-4 mt-2">
+
+
+                            <div class="col-12 col-md-4 text-center">
+
+                                <div class="passo-numero">
+                                    1
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    Cadastre-se
+                                </h5>
+
+                                <p class="small">
+                                    Faça seu cadastro gratuitamente
+                                    informando seus dados.
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-12 col-md-4 text-center">
+
+                                <div class="passo-numero">
+                                    2
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    Informe seu CPF
+                                </h5>
+
+                                <p class="small">
+                                    No caixa, informe o CPF cadastrado
+                                    para receber seus benefícios.
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-12 col-md-4 text-center">
+
+                                <div class="passo-numero">
+                                    3
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    Aproveite
+                                </h5>
+
+                                <p class="small">
+                                    Aproveite os preços especiais,
+                                    cupons e pontos.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-lg-5">
+
+                    <div class="caixa-info h-100">
+
+                        <h3 class="h4 fw-bold mb-3"
+                            style="color: #1B22A7;">
+
+                            Perguntas frequentes
+
+                        </h3>
+
+
+                        <div class="accordion" id="faqClube">
+
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq1"
+                                        aria-expanded="true"
+                                        aria-controls="faq1">
+
+                                        Quem pode participar do Clube?
+
+                                    </button>
+
+                                </h2>
+
+                                <div id="faq1"
+                                    class="accordion-collapse collapse show"
+                                    data-bs-parent="#faqClube">
+
+                                    <div class="accordion-body">
+
+                                        Qualquer pessoa maior de 18 anos,
+                                        com CPF válido, pode se cadastrar
+                                        gratuitamente.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq2"
+                                        aria-expanded="false"
+                                        aria-controls="faq2">
+
+                                        Existe algum custo para entrar?
+
+                                    </button>
+
+                                </h2>
+
+                                <div id="faq2"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#faqClube">
+
+                                    <div class="accordion-body">
+
+                                        Não. O Clube Zona Norte não tem
+                                        taxa de adesão nem mensalidade.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq3"
+                                        aria-expanded="false"
+                                        aria-controls="faq3">
+
+                                        Como funcionam os pontos?
+
+                                    </button>
+
+                                </h2>
+
+                                <div id="faq3"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#faqClube">
+
+                                    <div class="accordion-body">
+
+                                        A cada compra com o CPF informado,
+                                        você acumula pontos que podem ser
+                                        trocados por descontos em compras futuras.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq4"
+                                        aria-expanded="false"
+                                        aria-controls="faq4">
+
+                                        Os preços de membro valem em todas as lojas?
+
+                                    </button>
+
+                                </h2>
+
+                                <div id="faq4"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#faqClube">
+
+                                    <div class="accordion-body">
+
+                                        Sim, os preços exclusivos valem nas
+                                        lojas físicas do Mercado Zona Norte,
+                                        enquanto durarem os estoques.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REGRAS DO PROGRAMA -->
+        <section class="container pb-5">
+
+            <div class="row g-4">
+
+                <div class="col-12">
+
+                    <div class="caixa-info">
+
+                        <h3 class="h4 fw-bold mb-3"
+                            style="color: #1B22A7;">
+
+                            Regras do programa
+
+                        </h3>
+
+                        <ul class="mb-3">
+
+                            <li>
+                                Cadastro gratuito, pessoal e intransferível.
+                            </li>
+
+                            <li>
+                                É necessário informar o CPF no caixa
+                                para receber os benefícios.
+                            </li>
+
+                            <li>
+                                Os preços de membro são válidos apenas
+                                durante o período indicado.
+                            </li>
+
+                            <li>
+                                Os pontos acumulados possuem prazo de
+                                validade informado no cadastro.
+                            </li>
+
+                            <li>
+                                O mercado pode alterar as regras do programa
+                                mediante aviso prévio.
+                            </li>
+
+                        </ul>
+
+                        <p class="mb-0 small">
+
+                            Dúvidas? Fale com a gente pelo telefone
+                            <strong>(21) 99999-9999</strong>
+
+                            ou pelo e-mail
+
+                            <strong>
+                                atendimento@mercadozonanorte.com.br
+                            </strong>.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAMADA PARA O CLUBE -->
+        <section class="container">
+
+            <div class="caixa-clube">
+
+                <div class="row align-items-center g-3">
+
+                    <div class="col-12 col-md-8 text-center text-md-start">
+
+                        <h3 class="fw-bold">
+                            Pronto para economizar?
+                        </h3>
+
+                        <p class="mb-0">
+                            Faça parte do Clube Zona Norte
+                            e comece a aproveitar hoje mesmo.
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-4 text-center text-md-end">
+
+                        <a href="#" class="btn btn-lg btn-clube">
+                            CADASTRE-SE GRÁTIS
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+        <footer class="footer-site text-light py-4 mt-5">
+
+            <div class="container">
+
+                <div class="row g-4 align-items-start">
+
+
+                    <div class="col-12 col-md-4 text-center text-md-start">
+
+                        <a href="sobre.html" class="quem-somos">
+
+                            <h6 class="fw-bold text-uppercase mb-0">
+                                Quem Somos
+                            </h6>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-4 text-center text-md-start">
+
+                        <h6 class="fw-bold text-uppercase mb-2">
+                            Central de Atendimento
+                        </h6>
+
+                        <div
+                            class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+
+                            <img src="ícones/telefone.svg"
+                                alt="Telefone"
+                                class="footer-icon me-2">
+
+                            <span class="small">
+                                (21) 99999-9999
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="d-flex align-items-center justify-content-center justify-content-md-start">
+
+                            <img src="ícones/email.svg"
+                                alt="E-mail"
+                                class="footer-icon me-2">
+
+                            <span class="small">
+                                atendimento@mercadozonanorte.com.br
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-4 text-center text-md-start">
+
+                        <h6 class="fw-bold text-uppercase mb-2">
+                            Acompanhe o Zona Norte nas redes sociais
+                        </h6>
+
+                        <div
+                            class="d-flex gap-3 justify-content-center justify-content-md-start">
+
+
+                            <a href="#"
+                                class="social-link d-flex align-items-center gap-2">
+
+                                <img src="ícones/facebook.svg"
+                                    alt="Facebook"
+                                    class="footer-icon">
+
+                                <span class="small">
+                                    Facebook
+                                </span>
+
+                            </a>
+
+
+                            <a href="#"
+                                class="social-link d-flex align-items-center gap-2">
+
+                                <img src="ícones/instagram.svg"
+                                    alt="Instagram"
+                                    class="footer-icon">
+
+                                <span class="small">
+                                    Instagram
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="text-center small opacity-75">
+
+                    &copy; 2026 Mercado Zona Norte.
+                    Todos os direitos reservados.
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
 </body>
+
 </html>
