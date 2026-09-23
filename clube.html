@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clube | Mercado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============ INÍCIO DO CSS DO CLUBE (tudo com prefixo .clube, não conflita com o resto do site) ============ -->
+<style>
+.clube{--c-ink:#12303a;--c-mid:#2e8b57;--c-sun:#ffc93c;--c-red:#d93a2b;--c-bg:#f2f6f7;--c-line:#d5e0e3;
+  font-family:'Outfit',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--c-ink);line-height:1.5;background:#fff}
+.clube *{box-sizing:border-box}
+.clube h1,.clube h2,.clube h3,.clube p{margin:0}
+.clube a{color:inherit}
+.clube .c-wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.clube section{padding:64px 0}
+.clube h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.clube .c-sub{color:#48626b;max-width:60ch;margin-bottom:32px}
+
+/* Hero */
+.clube .c-hero{background:var(--c-ink);color:#fff;padding:72px 0}
+.clube .c-hero .c-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.clube .c-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}
+.clube .c-hero p{color:#c6d8dd;max-width:46ch;margin-bottom:28px;font-size:1.1rem}
+.clube .c-btn{display:inline-block;background:var(--c-sun);color:var(--c-ink);font:inherit;font-weight:700;border:0;border-radius:999px;padding:14px 28px;cursor:pointer;text-decoration:none;transition:transform .15s}
+.clube .c-btn:hover{transform:translateY(-2px)}
+.clube .c-btn:focus-visible,.clube .c-chip:focus-visible,.clube summary:focus-visible,.clube input:focus-visible{outline:3px solid var(--c-sun);outline-offset:3px}
+.clube .c-ghost{margin-left:12px;color:#fff;font-weight:600}
+.clube .c-card{aspect-ratio:1.6;max-width:420px;margin-left:auto;width:100%;border-radius:22px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(135deg,var(--c-mid),#1b5e3a);box-shadow:0 24px 50px rgba(0,0,0,.35);transform:rotate(-4deg)}
+.clube .c-card b{font-size:1.5rem;letter-spacing:-.01em}
+.clube .c-chip-ico{width:46px;height:34px;border-radius:7px;background:linear-gradient(135deg,#ffe18a,var(--c-sun))}
+.clube .c-card small{color:#d3efdf;letter-spacing:.12em}
+
+/* Benefícios */
+.clube .c-ben{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.clube .c-ben li{list-style:none;display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--c-line)}
+.clube .c-ben{padding:0;margin:0}
+.clube .c-ico{flex:none;width:48px;height:48px;border-radius:14px;background:var(--c-bg);display:grid;place-items:center;font-size:1.5rem}
+.clube .c-ben h3{font-size:1.1rem;margin-bottom:2px}
+.clube .c-ben p{color:#48626b;font-size:.97rem}
+
+/* Promoções + categorias */
+.clube .c-promo{background:var(--c-bg)}
+.clube .c-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.clube .c-chip{font:inherit;font-weight:600;background:#fff;color:var(--c-ink);border:1.5px solid var(--c-line);border-radius:999px;padding:9px 18px;cursor:pointer}
+.clube .c-chip[aria-pressed="true"]{background:var(--c-ink);color:#fff;border-color:var(--c-ink)}
+.clube .c-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.clube .c-prod{background:#fff;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px;position:relative;border:1px solid var(--c-line)}
+.clube .c-emoji{font-size:3rem;line-height:1;margin-bottom:6px}
+.clube .c-prod h3{font-size:1rem}
+.clube .c-cat{font-size:.85rem;color:#5b747c}
+.clube .c-off{position:absolute;top:14px;right:14px;background:var(--c-red);color:#fff;font-weight:700;font-size:.8rem;border-radius:8px;padding:3px 8px}
+.clube .c-old{text-decoration:line-through;color:#7a9098;font-size:.9rem;margin-top:auto}
+.clube .c-new{font-size:1.5rem;font-weight:800;color:var(--c-mid);letter-spacing:-.02em}
+.clube .c-new small{font-size:.8rem;font-weight:600;color:#48626b;letter-spacing:0}
+.clube .c-empty{color:#48626b}
+
+/* Informações */
+.clube .c-info .c-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.clube .c-steps{padding:0;margin:0;counter-reset:s}
+.clube .c-steps li{list-style:none;counter-increment:s;display:flex;gap:16px;margin-bottom:22px}
+.clube .c-steps li::before{content:counter(s);flex:none;width:36px;height:36px;border-radius:50%;background:var(--c-sun);font-weight:800;display:grid;place-items:center}
+.clube .c-steps h3{font-size:1.05rem}
+.clube .c-steps p{color:#48626b;font-size:.97rem}
+.clube details{border-top:1px solid var(--c-line);padding:16px 0}
+.clube details:last-of-type{border-bottom:1px solid var(--c-line)}
+.clube summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.clube summary::after{content:'+';font-size:1.3rem;line-height:1}
+.clube details[open] summary::after{content:'–'}
+.clube details p{margin-top:8px;color:#48626b}
+
+/* Cadastro */
+.clube .c-join{background:var(--c-ink);color:#fff;text-align:center}
+.clube .c-join .c-sub{color:#c6d8dd;margin-inline:auto}
+.clube .c-form{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:640px;margin:0 auto}
+.clube .c-form input{flex:1 1 200px;font:inherit;padding:14px 18px;border-radius:999px;border:0;color:var(--c-ink)}
+.clube .c-msg{margin-top:16px;min-height:1.5em;font-weight:600;color:var(--c-sun)}
+
+@media(max-width:800px){
+  .clube .c-hero .c-wrap,.clube .c-info .c-wrap,.clube .c-ben{grid-template-columns:1fr}
+  .clube .c-card{margin:12px auto 0;transform:none}
+  .clube section{padding:48px 0}
+}
+</style>
+<!-- ============ FIM DO CSS DO CLUBE ============ -->
+</head>
+<body style="margin:0">
+
+<!-- ============ INÍCIO DO HTML DO CLUBE (copie de <main> até </main>) ============ -->
+<main class="clube" id="clube">
+
+  <header class="c-hero">
+    <div class="c-wrap">
+      <div>
+        <h1>Pague menos nas compras que você já faz.</h1>
+        <p>Entre para o Clube e tenha preço de sócio em centenas de produtos, cashback em toda compra e ofertas antes de todo mundo.</p>
+        <a class="c-btn" href="#c-cadastro">Quero ser sócio</a>
+        <a class="c-ghost" href="#c-promocoes">Ver ofertas</a>
+      </div>
+      <div class="c-card" aria-hidden="true">
+        <div class="c-chip-ico"></div>
+        <div><b>Clube Mercado</b><br><small>SÓCIO 0000 0000</small></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="c-beneficios">
+    <div class="c-wrap">
+      <h2>Benefícios de ser sócio</h2>
+      <p class="c-sub">Sem mensalidade e sem letra miúda: quanto mais você compra, mais o Clube devolve.</p>
+      <ul class="c-ben">
+        <li><span class="c-ico" aria-hidden="true">🏷️</span><div><h3>Preço de sócio</h3><p>Descontos exclusivos em produtos selecionados, todos os dias da semana.</p></div></li>
+        <li><span class="c-ico" aria-hidden="true">💰</span><div><h3>Cashback de 3%</h3><p>Uma parte de cada compra volta como saldo para usar na próxima.</p></div></li>
+        <li><span class="c-ico" aria-hidden="true">⏰</span><div><h3>Ofertas antecipadas</h3><p>Sócios recebem as promoções da semana 24 horas antes do público geral.</p></div></li>
+        <li><span class="c-ico" aria-hidden="true">🚚</span><div><h3>Entrega grátis</h3><p>Frete zero em pedidos acima de R$ 120 dentro da sua região.</p></div></li>
+        <li><span class="c-ico" aria-hidden="true">🎂</span><div><h3>Cupom de aniversário</h3><p>No mês do seu aniversário, um cupom de desconto na sua compra.</p></div></li>
+        <li><span class="c-ico" aria-hidden="true">📄</span><div><h3>Nota com CPF</h3><p>Acompanhe suas compras e seu saldo de cashback em um só lugar.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="c-promo" id="c-promocoes">
+    <div class="c-wrap">
+      <h2>Produtos em promoção para sócios</h2>
+      <p class="c-sub">Escolha uma categoria para ver só o que interessa.</p>
+      <div class="c-tabs" id="c-tabs" role="group" aria-label="Categorias de produtos"></div>
+      <div class="c-grid" id="c-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="c-info" id="c-informacoes">
+    <div class="c-wrap">
+      <div>
+        <h2>Como participar</h2>
+        <p class="c-sub">Em três passos você já aproveita.</p>
+        <ol class="c-steps">
+          <li><div><h3>Faça seu cadastro</h3><p>Preencha nome e e-mail no formulário abaixo. Leva menos de um minuto.</p></div></li>
+          <li><div><h3>Informe seu CPF no caixa</h3><p>É só falar o CPF ao finalizar a compra para ativar o preço de sócio.</p></div></li>
+          <li><div><h3>Acumule e economize</h3><p>O cashback cai no seu saldo e pode ser usado na compra seguinte.</p></div></li>
+        </ol>
+      </div>
+      <div>
+        <h2>Perguntas frequentes</h2>
+        <p class="c-sub">O essencial sobre o programa.</p>
+        <details><summary>O Clube tem custo?</summary><p>Não. O cadastro é gratuito e não há mensalidade.</p></details>
+        <details><summary>Como uso meu cashback?</summary><p>O saldo é abatido automaticamente na próxima compra, informando seu CPF no caixa.</p></details>
+        <details><summary>Quanto tempo o saldo fica válido?</summary><p>O cashback vale por 60 dias a partir da data da compra.</p></details>
+        <details><summary>As ofertas valem nas compras online?</summary><p>Sim. Os preços de sócio aparecem tanto na loja física quanto no site.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-join" id="c-cadastro">
+    <div class="c-wrap">
+      <h2>Entre para o Clube</h2>
+      <p class="c-sub">Cadastro gratuito. Comece a economizar na próxima compra.</p>
+      <form class="c-form" id="c-form">
+        <input type="text" id="c-nome" placeholder="Seu nome" required aria-label="Seu nome">
+        <input type="email" id="c-email" placeholder="Seu e-mail" required aria-label="Seu e-mail">
+        <button class="c-btn" type="submit">Quero ser sócio</button>
+      </form>
+      <p class="c-msg" id="c-msg" role="status"></p>
+    </div>
+  </section>
+
+</main>
+<!-- ============ FIM DO HTML DO CLUBE ============ -->
+
+<!-- ============ INÍCIO DO JS DO CLUBE ============ -->
+<script>
+(function () {
+  var produtos = [
+    { nome: 'Arroz tipo 1 5kg', cat: 'Mercearia', emoji: '🍚', de: 32.90, por: 26.90 },
+    { nome: 'Feijão carioca 1kg', cat: 'Mercearia', emoji: '🫘', de: 9.49, por: 7.49 },
+    { nome: 'Café torrado 500g', cat: 'Mercearia', emoji: '☕', de: 24.90, por: 19.90 },
+    { nome: 'Banana prata (kg)', cat: 'Hortifruti', emoji: '🍌', de: 6.99, por: 4.99 },
+    { nome: 'Tomate (kg)', cat: 'Hortifruti', emoji: '🍅', de: 8.99, por: 6.49 },
+    { nome: 'Peito de frango (kg)', cat: 'Açougue', emoji: '🍗', de: 16.90, por: 13.90 },
+    { nome: 'Carne moída (kg)', cat: 'Açougue', emoji: '🥩', de: 39.90, por: 34.90 },
+    { nome: 'Pão de forma 500g', cat: 'Padaria e frios', emoji: '🍞', de: 9.90, por: 7.90 },
+    { nome: 'Queijo mussarela (kg)', cat: 'Padaria e frios', emoji: '🧀', de: 45.90, por: 39.90 },
+    { nome: 'Detergente 500ml', cat: 'Limpeza', emoji: '🧴', de: 3.29, por: 2.49 },
+    { nome: 'Sabão em pó 1,6kg', cat: 'Limpeza', emoji: '🧺', de: 24.90, por: 19.90 },
+    { nome: 'Shampoo 350ml', cat: 'Higiene', emoji: '🧼', de: 17.90, por: 12.90 }
+  ];
+  var cats = ['Todas'].concat(produtos.map(function (p) { return p.cat; }).filter(function (c, i, a) { return a.indexOf(c) === i; }));
+  var ativa = 'Todas';
+  var tabs = document.getElementById('c-tabs');
+  var grid = document.getElementById('c-grid');
+  function brl(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+
+  function renderTabs() {
+    tabs.innerHTML = '';
+    cats.forEach(function (c) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'c-chip';
+      b.textContent = c;
+      b.setAttribute('aria-pressed', c === ativa);
+      b.onclick = function () { ativa = c; renderTabs(); renderGrid(); };
+      tabs.appendChild(b);
+    });
+  }
+
+  function renderGrid() {
+    var lista = produtos.filter(function (p) { return ativa === 'Todas' || p.cat === ativa; });
+    if (!lista.length) { grid.innerHTML = '<p class="c-empty">Nenhuma oferta nesta categoria agora.</p>'; return; }
+    grid.innerHTML = lista.map(function (p) {
+      var pct = Math.round((1 - p.por / p.de) * 100);
+      return '<article class="c-prod"><span class="c-off">-' + pct + '%</span>' +
+        '<div class="c-emoji" aria-hidden="true">' + p.emoji + '</div>' +
+        '<h3>' + p.nome + '</h3><span class="c-cat">' + p.cat + '</span>' +
+        '<span class="c-old">' + brl(p.de) + '</span>' +
+        '<span class="c-new">' + brl(p.por) + ' <small>sócio</small></span></article>';
+    }).join('');
+  }
+
+  document.getElementById('c-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = document.getElementById('c-nome').value.trim().split(' ')[0];
+    document.getElementById('c-msg').textContent = 'Cadastro recebido, ' + nome + '! Você já pode aproveitar o preço de sócio.';
+    this.reset();
+  });
+
+  renderTabs();
+  renderGrid();
+})();
+</script>
+<!-- ============ FIM DO JS DO CLUBE ============ -->
+</body>
+</html>
