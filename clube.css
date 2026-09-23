@@ -1,0 +1,140 @@
+/* Estilos exclusivos da página clube.html
+   Usa as mesmas cores do site
+*/
+
+
+/* ==============================
+   CLUBE ZONA NORTE
+   ============================== */
+
+
+.card-beneficio {
+    height: 100%;
+    border-top: 4px solid #1B22A7;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+
+.icone-beneficio {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+
+.card-beneficio h5 {
+    color: #1B22A7;
+    font-weight: 700;
+}
+
+
+.selo-membro {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background-color: #1B22A7;
+    color: #FAFAFA;
+
+    font-weight: 700;
+    font-size: 0.85rem;
+
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+
+.preco-membro {
+    color: #E53935;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+.card-categoria {
+    display: block;
+    height: 100%;
+
+    background-color: #FAFAFA;
+
+    border: 1px solid #DDE2F5;
+    border-radius: 10px;
+
+    padding: 24px 12px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #1B22A7;
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+
+.card-categoria:hover {
+    background-color: #1B22A7;
+    color: #FAFAFA;
+    transform: translateY(-3px);
+}
+
+
+.card-categoria .icone-categoria {
+    display: block;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 8px;
+}
+
+
+.card-categoria small {
+    display: block;
+
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+
+.passo-numero {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background-color: #1B22A7;
+    color: #FAFAFA;
+
+    font-weight: 700;
+    font-size: 1.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 12px;
+}
+
+
+.caixa-info {
+    background-color: #EEF1FD;
+
+    border-left: 5px solid #1B22A7;
+
+    border-radius: 10px;
+
+    padding: 24px;
+}
+
+
+.accordion-button:not(.collapsed) {
+    background-color: #EEF1FD;
+
+    color: #1B22A7;
+
+    font-weight: 600;
+}
