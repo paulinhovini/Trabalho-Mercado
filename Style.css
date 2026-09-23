@@ -95,3 +95,24 @@ body {
 .card-text {
     font-weight: 700;
 }
+
+/* ==============================
+   CABEÇALHO - NOSSAS LOJAS
+   ============================== */
+
+.cabecalho-pagina {
+    background-color: #4260E6;
+    color: #FAFAFA;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.cabecalho-pagina h1 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cabecalho-pagina p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
