@@ -30,6 +30,24 @@
     width: 24px;
     height: 24px;
 }
+/* ==============================
+   CABEÇALHO DAS PÁGINAS
+   ============================== */
+
+.cabecalho-pagina {
+    background-color: #4260E6;
+    color: #FAFAFA;
+    padding: 48px 0;
+}
+
+.cabecalho-pagina h1 {
+    font-weight: 700;
+}
+
+.cabecalho-pagina p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
 
 /* ==============================
    CLUBE ZONA NORTE
