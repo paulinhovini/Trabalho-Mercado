@@ -1,0 +1,131 @@
+/* ==============================
+   NAVBAR
+   ============================== */
+
+.navbar {
+    background-color: #1B22A7;
+}
+
+.nav-menu {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+}
+
+.nav-menu:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==============================
+    LOGIN
+   ============================== */
+
+body {
+    background: #f6f7fb;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px; 
+}
+
+    .login-card h1 {
+        color: #1B22A7;
+        font-weight: 700;
+    }
+
+    .form-control {
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ced4da;
+    }
+
+    .form-control:focus {
+        border-color: #4260E6;
+        box-shadow: 0 0 0 0.2rem rgba(66, 96, 230, 0.15);
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #333333;
+    }
+
+    .btn-login {
+        background: #1B22A7;
+        color: white;
+        font-weight: 600;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        transition: background 0.2s ease;
+    }
+
+    .btn-login:hover {
+        background: #4260E6;
+        color: white;
+    }
+
+    .login-card a {
+        color: #1B22A7;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .login-card a:hover {
+        color: #4260E6;
+        text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+        .login-card {
+            padding: 25px;
+        }
+    }
+
+    /* ==============================
+   FOOTER
+   ============================== */
+
+    .footer-site {
+        background-color: #1B22A7;
+    }
+
+    .footer-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .quem-somos,
+    .social-link {
+        color: #FAFAFA;
+        text-decoration: none;
+    }
+
+    .quem-somos:hover,
+    .social-link:hover {
+        color: #FAFAFA;
+        text-decoration: underline;
+    }
