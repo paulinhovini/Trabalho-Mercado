@@ -40,40 +40,6 @@ body {
 
 
 /* ==============================
-   BOTÃO BUSCAR
-   ============================== */
-
-.btn-buscar {
-    background-color: #FAFAFA;
-    color: #1B22A7;
-    border: 1px solid #FAFAFA;
-}
-
-.btn-buscar:hover {
-    background-color: #1B22A7;
-    color: #FAFAFA;
-    border-color: #FAFAFA;
-}
-
-
-/* ==============================
-   PRODUTOS
-   ============================== */
-
-.btn-produto {
-    background-color: #1B22A7;
-    color: #FAFAFA;
-    border: 1px solid #1B22A7;
-}
-
-.btn-produto:hover {
-    background-color: #4260E6;
-    color: #FAFAFA;
-    border-color: #4260E6;
-}
-
-
-/* ==============================
    CARDS
    ============================== */
 
@@ -97,22 +63,27 @@ body {
 }
 
 /* ==============================
-   CABEÇALHO - NOSSAS LOJAS
+   FOOTER
    ============================== */
 
-.cabecalho-pagina {
-    background-color: #4260E6;
+ .footer-site {
+    background-color: #1B22A7;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.quem-somos,
+.social-link {
     color: #FAFAFA;
-    padding: 70px 0;
-    text-align: center;
+    text-decoration: none;
 }
 
-.cabecalho-pagina h1 {
-    font-weight: 700;
-    margin-bottom: 15px;
+.quem-somos:hover,
+.social-link:hover {
+    color: #FAFAFA;
+    text-decoration: underline;
 }
 
-.cabecalho-pagina p {
-    margin-bottom: 0;
-    opacity: 0.9;
-}
