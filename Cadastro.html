@@ -2,193 +2,210 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Home Page</title>
 
-    <link rel="stylesheet" href="Style.css">
-
-    <title>Cadastro</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
-    <body>
-
-    <div class="login-container">
-
-        <div class="login-card">
-
-            <h1 class="text-center mb-4">
-                Criar conta
-            </h1>
-
-            <form>
-
-                <div class="mb-3">
-
-                    <label for="nome" class="form-label">
-                        Nome completo
-                    </label>
-
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="nome"
-                        placeholder="Digite seu nome completo"
-                        required>
-
+<!-- MENU -->
+        <nav class="navbar py-4 navbar-expand-md" style="background-color: #1B22A7;">
+            <div class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
+                <div class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
+                    <a class="navbar-brand fw-bold text-light" href="index.html">
+                        Mercado Zona Norte
+                    </a>
                 </div>
 
+                <div class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
 
-                <div class="mb-3">
-
-                    <label for="email" class="form-label">
-                        E-mail
-                    </label>
-
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Digite seu e-mail"
-                        required>
-
-                </div>
-
-
-                <div class="mb-3">
-
-                    <label for="senha" class="form-label">
-                        Senha
-                    </label>
-
-                    <input
-                        type="password"
-                        class="form-control"
-                        id="senha"
-                        placeholder="Crie uma senha"
-                        required>
-
-                </div>
-
-
-                <div class="mb-3">
-
-                    <label for="confirmarSenha" class="form-label">
-                        Confirmar senha
-                    </label>
-
-                    <input
-                        type="password"
-                        class="form-control"
-                        id="confirmarSenha"
-                        placeholder="Digite a senha novamente"
-                        required>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="btn btn-login w-100">
-
-                    Criar conta
-
-                </button>
-
-
-                <p class="text-center mt-3">
-
-                    Já possui uma conta?
-
-                    <a href="Login.html">
-                        Entrar
+                    <a class="nav-menu" href="ofertas.html">
+                        <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
+                        <span>Ofertas</span>
                     </a>
 
-                </p>
+                    <a class="nav-menu" href="clube.html">
+                        <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
+                        <span>Clube</span>
+                    </a>
 
-            </form>
+                    </a>
+                    <a class="nav-menu" href="Cadastro.html">
+                        <img src="ícones/Login.svg" alt="Login/Cadastro" class="nav-icon">
+                        <span>Login/Cadastro</span>
+                    </a>
+                    
+                    <a class="nav-menu" href="nossaslojas.html">
+                        <img src="ícones/localização.svg" alt="Login/Cadastro" class="nav-icon">
+                        <span>Lojas</span>
+                    </a>
 
-        </div>
+                </div>
+            </div>
+        </nav>
 
-    </div>
+    <body>
 
-</body>
+        <!-- CADASTRO  -->
+
+        <div class="login-container">
+
+            <div class="login-card">
+
+                <h1 class="text-center">
+                    Criar conta
+                </h1>
+
+                <form>
+
+                    <div class="mb-3">
+
+                        <label for="nome" class="form-label">
+                            Nome completo
+                        </label>
+
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo"
+                            required>
 
                     </div>
 
 
-                    <!-- Senha -->
+                    <div class="mb-3">
+
+                        <label for="email" class="form-label">
+                            E-mail
+                        </label>
+
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+
+                    </div>
+
+
                     <div class="mb-3">
 
                         <label for="senha" class="form-label">
                             Senha
                         </label>
 
-                        <input
-                            type="password"
-                            class="form-control"
-                            id="senha"
-                            placeholder="Crie uma senha"
-                            required>
+                        <input type="password" class="form-control" id="senha" placeholder="Crie uma senha" required>
 
                     </div>
 
 
-                    <!-- Confirmar senha -->
                     <div class="mb-3">
 
                         <label for="confirmarSenha" class="form-label">
                             Confirmar senha
                         </label>
 
-                        <input
-                            type="password"
-                            class="form-control"
-                            id="confirmarSenha"
-                            placeholder="Digite a senha novamente"
-                            required>
+                        <input type="password" class="form-control" id="confirmarSenha"
+                            placeholder="Digite a senha novamente" required>
 
                     </div>
 
-
-                    <!-- Botão -->
-                    <button
-                        type="submit"
-                        class="btn btn-primary w-100">
-
+                    <button type="submit" class="btn btn-primary w-100">
                         Criar conta
-
                     </button>
-
-
-                    <!-- Link para login -->
                     <p class="text-center mt-3">
-
                         Já possui uma conta?
 
                         <a href="Login.html">
                             Entrar
                         </a>
-
                     </p>
-
                 </form>
+            </div>
+        </div>
+    </body>
+
+    <!-- FOOTER -->
+    <footer class="footer-site text-light py-4 mt-5">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <div class="d-flex flex-column gap-2">
+                        <a href="sobre.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
+                        </a>
+                        <a href="contato.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Contatos</h6>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Central de Atendimento</h6>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+                        <img src="ícones/telefone.svg" alt="Telefone" class="footer-icon me-2">
+                        <span class="small">(21) 99999-9999</span>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="ícones/email.svg" alt="E-mail" class="footer-icon me-2">
+                        <span class="small">atendimento@mercadozonanorte.com.br</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Acompanhe o Zona Norte nas redes sociais</h6>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="https://www.facebook.com.br" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/facebook.svg" alt="Facebook" class="footer-icon">
+                            <span class="small">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/instagram.svg" alt="Instagram" class="footer-icon">
+                            <span class="small">Instagram</span>
+                        </a>
+                    </div>
+                </div>
 
             </div>
 
+            <div class="text-center small opacity-75">
+                &copy; 2026 Mercado Zona Norte. Todos os direitos reservados.
+            </div>
         </div>
+    </footer>
 
-    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const senhaInput = document.getElementById("senha");
+        const confirmarSenhaInput = document.getElementById("confirmarSenha");
 
-</body>
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const senha = senhaInput.value;
+            const confirmarSenha = confirmarSenhaInput.value;
+
+            if (senha.length < 6 || senha.length > 15) {
+                alert("A senha deve ter entre 6 e 15 caracteres.");
+                senhaInput.focus();
+                return;
+            }
+            if (senha !== confirmarSenha) {
+                alert("As senhas não coincidem. Por favor, verifique.");
+                confirmarSenhaInput.focus();
+                return;
+            }
+
+            alert("Cadastro realizado com sucesso!");
+            
+            window.location.href = "Login.html";
+        });
+    });
+</script>
 
 </html>
