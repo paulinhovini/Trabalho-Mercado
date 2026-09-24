@@ -20,6 +20,13 @@
     font-size: 2.5rem;
     line-height: 1;
     margin-bottom: 12px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.icone-beneficio img {
+    width: 48px;  
+    height: auto;
 }
 
 
