@@ -95,6 +95,23 @@
     font-weight: 600;
 }
 
+ .btn-produto {
+    background-color: #1B22A7;
+    color: #FAFAFA;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #1B22A7;
+    margin-top: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-produto:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+    border-color: #4260E6;
+}
+
 .btn-clube:hover {
     background-color: #1B22A7;
     color: #FAFAFA;
@@ -122,7 +139,7 @@
 
 
 /* ==============================
-   RODAPÉ
+   Fotter
    ============================== */
 
 .footer-site {
