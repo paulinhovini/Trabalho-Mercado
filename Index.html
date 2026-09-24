@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -17,35 +17,43 @@
 </head>
 
 <body>
-
-    <main>
+<!-- MENU -->
         <nav class="navbar py-4 navbar-expand-md" style="background-color: #1B22A7;">
-           <div class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
-              <div class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
+            <div class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
+                <div class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
                     <a class="navbar-brand fw-bold text-light" href="index.html">
                         Mercado Zona Norte
                     </a>
                 </div>
 
- <div class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
+                <div class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
+
                     <a class="nav-menu" href="ofertas.html">
                         <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
                         <span>Ofertas</span>
                     </a>
-                    <a class="nav-menu" href="#">
+
+                    <a class="nav-menu" href="clube.html">
                         <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
                         <span>Clube</span>
                     </a>
-                  </a>
-                    <a class="nav-menu" href="#">
+
+                    </a>
+                    <a class="nav-menu" href="Cadastro.html">
                         <img src="ícones/Login.svg" alt="Login/Cadastro" class="nav-icon">
                         <span>Login/Cadastro</span>
                     </a>
+                    
+                   <a class="nav-menu" href="nossaslojas.html">
+                        <img src="ícones/localização.svg" alt="Login/Cadastro" class="nav-icon">
+                        <span>Lojas</span>
+                    </a>
 
                 </div>
-            </div>         
+            </div>
         </nav>
 
+        <!-- BANNERS -->
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -71,16 +79,18 @@
 
         </div>
 
+        <!-- PRODUTOS -->
+
         <section class="container py-5">
 
             <div class="row g-4">
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Picanha.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Filé-de-Peito.jpg" class="card-img-top" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Picanha Peça Resfriada Maturatta Friboi</h5>
-                            <p class="card-text">R$ 169,99</p>
+                            <h5 class="card-title">Filé de Peito de Frango Sadia Zip 1Kg</h5>
+                            <p class="card-text">R$ 17,98</p>
                             <a href="#" class="btn btn-produto">VER PRODUTO</a>
                         </div>
                     </div>
@@ -88,10 +98,10 @@
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Queijo.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Margarina.jpg" class="card-img-top" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Queijo Minas Padrão Itambé Fracionado</h5>
-                            <p class="card-text">R$ 40,50</p>
+                            <h5 class="card-title">Margarina Qualy <br>C/ Sal 500g</h5>
+                            <p class="card-text">R$ 10,49</p>
                             <a href="#" class="btn btn-produto">VER PRODUTO</a>
                         </div>
                     </div>
@@ -99,10 +109,10 @@
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Ovos.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Arroz.jpg" class="card-img-top" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Ovos Brancos c/ 20 Unidades</h5>
-                            <p class="card-text">R$ 10,99 </p>
+                            <h5 class="card-title">Arroz Branco Tio João Tipo1 1Kg</h5>
+                            <p class="card-text">R$ 6,11</p>
                             <a href="#" class="btn btn-produto">VER PRODUTO</a>
                         </div>
                     </div>
@@ -110,54 +120,53 @@
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Suco.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Feijão.jpg" class="card-img-top" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Suco Aurora Integral Uva Tinto Caixa 1.5 L</h5>
-                            <p class="card-text">R$ 25,49</p>
+                            <h5 class="card-title">Feijão Preto Combrasil Tipo1 1Kg</h5>
+                            <p class="card-text">R$ 8,99</p>
                             <a href="#" class="btn btn-produto">VER PRODUTO</a>
                         </div>
                     </div>
                 </div>
         </section>
 
-        <section class="container py-5">
-            <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
-
-                <div class="carousel-inner w-75 mx-auto py-2">
-
-                    <div class="carousel-item active">
-
-                        <div class="row g-3">
-                            <div class="col-12 col-md-6">
-                                <div class="rounded-4 overflow-hidden">
-                                    <img src="Imagens/Banners/banner-4.jpg" class="d-block w-100"
-                                        alt="Ofertas do Mercado Zona Norte">
-                                </div>
-                            </div>
-
-                           <div class="col-12 col-md-6">
-                                <div class="rounded-4 overflow-hidden">
-                                    <img src="Imagens/Banners/banner-5.jpg" class="d-block w-100"
-                                        alt="Ofertas do Mercado Zona Norte">
-                                </div>
-                            </div>
-
-                        </div>
+        <!-- BANNERS -->
+        <section class="container pb-5">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <div class="rounded-4 overflow-hidden">
+                        <img src="Imagens/Banners/banner-4.jpg" class="d-block w-100"
+                            alt="Ofertas do Mercado Zona Norte">
                     </div>
                 </div>
-             </div>
-     </section>
+                <div class="col-12 col-md-6">
+                    <div class="rounded-4 overflow-hidden">
+                        <img src="Imagens/Banners/banner-5.jpg" class="d-block w-100"
+                            alt="Ofertas do Mercado Zona Norte">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- FOOTER -->
         <footer class="footer-site text-light py-4 mt-5">
             <div class="container">
                 <div class="row g-4 align-items-start">
 
                     <div class="col-12 col-md-4 text-center text-md-start">
-                         <a href="sobre.html" class="quem-somos">
-                            <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
-                        </a> </div>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="sobre.html" class="quem-somos">
+                                <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
+                            </a>
 
-                   <div class="col-12 col-md-4 text-center text-md-start">
+                            <a href="contato.html" class="quem-somos">
+                                <h6 class="fw-bold text-uppercase mb-0">Contatos</h6>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 text-center text-md-start">
                         <h6 class="fw-bold text-uppercase mb-2">Central de Atendimento</h6>
 
                         <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
@@ -169,11 +178,12 @@
                             <img src="ícones/email.svg" alt="E-mail" class="footer-icon me-2">
                             <span class="small">atendimento@mercadozonanorte.com.br</span>
                         </div>
+
                     </div>
 
-                   <div class="col-12 col-md-4 text-center text-md-start">
+                    <div class="col-12 col-md-4 text-center text-md-start">
                         <h6 class="fw-bold text-uppercase mb-2">Acompanhe o Zona Norte nas redes sociais</h6>
-                       <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
                             <a href="https://www.facebook.com.br" class="social-link d-flex align-items-center gap-2">
                                 <img src="ícones/facebook.svg" alt="Facebook" class="footer-icon">
                                 <span class="small">Facebook</span>
@@ -186,8 +196,6 @@
                     </div>
 
                 </div>
-
-                <hr>
 
                 <div class="text-center small opacity-75">
                     &copy; 2026 Mercado Zona Norte. Todos os direitos reservados.
