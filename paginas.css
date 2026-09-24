@@ -6,13 +6,33 @@
 
 
 /* ==============================
-   MENU - PÁGINA ATUAL
+   NAVBAR
    ============================== */
 
-.nav-menu.ativo {
-    background-color: #4260E6;
+.navbar {
+    background-color: #1B22A7;
 }
 
+.nav-menu {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+}
+
+.nav-menu:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
 
 /* ==============================
    CABEÇALHO DAS PÁGINAS
@@ -143,6 +163,31 @@
    ============================== */
 
 .footer-site {
+    background-color: #1B22A7;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.quem-somos,
+.social-link {
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+.quem-somos:hover,
+.social-link:hover {
+    color: #FAFAFA;
+    text-decoration: underline;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+ .footer-site {
     background-color: #1B22A7;
 }
 
