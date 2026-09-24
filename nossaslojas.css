@@ -1,0 +1,116 @@
+/* ==============================
+   NAVBAR
+   ============================== */
+
+.navbar {
+    background-color: #1B22A7;
+}
+
+.nav-menu {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+}
+
+.nav-menu:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==============================
+   CABEÇALHO DAS PÁGINAS
+   ============================== */
+
+.cabecalho-pagina {
+    background-color: #4260E6;
+    color: #FAFAFA;
+    padding: 48px 0;
+}
+
+.cabecalho-pagina h1 {
+    font-weight: 700;
+}
+
+.cabecalho-pagina p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+
+/* ==============================
+   ESTILOS DOS CARDS DE LOJAS
+   ============================== */
+
+.container .card {
+    border: 1px solid rgba(27, 34, 167, 0.15);
+    border-top: 4px solid #1B22A7;
+    border-radius: 10px;
+    }
+
+.container .card .card-title {
+    color: #1B22A7;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.container .card .card-text {
+    color: #495057;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+}
+
+.container .card .card-text strong {
+    color: #1B22A7;
+}
+
+.container .card .btn-produto {
+    background-color: #1B22A7;
+    color: #FAFAFA;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #1B22A7;
+    margin-top: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.container .card .btn-produto:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+    border-color: #4260E6;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+ .footer-site {
+    background-color: #1B22A7;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.quem-somos,
+.social-link {
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+.quem-somos:hover,
+.social-link:hover {
+    color: #FAFAFA;
+    text-decoration: underline;
+}
