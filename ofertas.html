@@ -20,31 +20,38 @@
 <body>
 
     <main>
-        <!-- MENU (mesmo da página inicial) -->
+       <!-- MENU -->
         <nav class="navbar py-4 navbar-expand-md" style="background-color: #1B22A7;">
             <div class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
                 <div class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
-                    <a class="navbar-brand fw-bold text-light" href="Index.html">
+                    <a class="navbar-brand fw-bold text-light" href="index.html">
                         Mercado Zona Norte
                     </a>
-                    <form class="d-flex ms-md-3 w-100 w-md-auto" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Pesquise aqui"
-                            aria-label="Pesquisar">
-                        <button type="submit" class="btn btn-buscar">
-                            Buscar
-                        </button>
-                    </form>
                 </div>
 
                 <div class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
-                    <a class="nav-menu ativo" href="ofertas.html">
+
+                    <a class="nav-menu" href="ofertas.html">
                         <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
                         <span>Ofertas</span>
                     </a>
-                    <a class="nav-menu" href="#">
+
+                    <a class="nav-menu" href="clube.html">
                         <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
                         <span>Clube</span>
                     </a>
+
+                    </a>
+                    <a class="nav-menu" href="Cadastro.html">
+                        <img src="ícones/Login.svg" alt="Login/Cadastro" class="nav-icon">
+                        <span>Login/Cadastro</span>
+                    </a>
+                    
+                    <a class="nav-menu" href="nossaslojas.html">
+                        <img src="ícones/localização.svg" alt="Login/Cadastro" class="nav-icon">
+                        <span>Lojas</span>
+                    </a>
+
                 </div>
             </div>
         </nav>
@@ -104,7 +111,7 @@
                         <img src="Imagens/Cards/Ovos.jpg" class="card-img-top"
                             alt="Ovos Brancos Grandes Mantiqueira com 20 unidades">
                         <div class="card-body">
-                            <h5 class="card-title">Ovos Brancos Grandes Mantiqueira c/ 20 Unidades</h5>
+                            <h5 class="card-title">Ovos Brancos <br>c/ 20 Unidades</h5>
                             <p class="preco-antigo">de <del>R$ 16,24</del></p>
                             <p class="preco-oferta">R$ 12,99</p>
                             <a href="#" class="btn btn-produto">VER PRODUTO</a>
@@ -118,7 +125,7 @@
                         <img src="Imagens/Cards/Suco.jpg" class="card-img-top"
                             alt="Suco Aurora Integral Uva Tinto Caixa 1.5 Litros">
                         <div class="card-body">
-                            <h5 class="card-title">Suco Aurora Integral Uva Tinto Caixa 1.5 Litros</h5>
+                            <h5 class="card-title">Suco Aurora Integral Uva Tinto Caixa 1.5 L</h5>
                             <p class="preco-antigo">de <del>R$ 29,99</del></p>
                             <p class="preco-oferta">R$ 25,49</p>
                             <a href="#" class="btn btn-produto">VER PRODUTO</a>
@@ -184,13 +191,13 @@
             <div class="row g-3">
                 <div class="col-12 col-md-6">
                     <div class="rounded-4 overflow-hidden">
-                        <img src="Imagens/Banners/banner-4.jpg" class="d-block w-100"
+                        <img src="Imagens/Banners/banner-6.jpg" class="d-block w-100"
                             alt="Ofertas do Mercado Zona Norte">
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="rounded-4 overflow-hidden">
-                        <img src="Imagens/Banners/banner-5.jpg" class="d-block w-100"
+                        <img src="Imagens/Banners/banner-7.jpg" class="d-block w-100"
                             alt="Ofertas do Mercado Zona Norte">
                     </div>
                 </div>
@@ -206,21 +213,26 @@
                         <p class="mb-0">Cadastre-se gratuitamente e receba descontos exclusivos toda semana.</p>
                     </div>
                     <div class="col-12 col-md-4 text-center text-md-end">
-                        <a href="#" class="btn btn-lg btn-clube">QUERO PARTICIPAR</a>
+                        <a href="clube.html" class="btn btn-lg btn-clube">QUERO PARTICIPAR</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- RODAPÉ (mesmo da página inicial) -->
+ <!-- FOOTER -->
         <footer class="footer-site text-light py-4 mt-5">
             <div class="container">
                 <div class="row g-4 align-items-start">
 
                     <div class="col-12 col-md-4 text-center text-md-start">
-                        <a href="sobre.html" class="quem-somos">
-                            <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
-                        </a>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="sobre.html" class="quem-somos">
+                                <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
+                            </a>
+                            <a href="contato.html" class="quem-somos">
+                                <h6 class="fw-bold text-uppercase mb-0">Contatos</h6>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="col-12 col-md-4 text-center text-md-start">
@@ -240,11 +252,11 @@
                     <div class="col-12 col-md-4 text-center text-md-start">
                         <h6 class="fw-bold text-uppercase mb-2">Acompanhe o Zona Norte nas redes sociais</h6>
                         <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                            <a href="#" class="social-link d-flex align-items-center gap-2">
+                            <a href="https://www.facebook.com.br" class="social-link d-flex align-items-center gap-2">
                                 <img src="ícones/facebook.svg" alt="Facebook" class="footer-icon">
                                 <span class="small">Facebook</span>
                             </a>
-                            <a href="#" class="social-link d-flex align-items-center gap-2">
+                            <a href="https://www.instagram.com" class="social-link d-flex align-items-center gap-2">
                                 <img src="ícones/instagram.svg" alt="Instagram" class="footer-icon">
                                 <span class="small">Instagram</span>
                             </a>
@@ -252,8 +264,6 @@
                     </div>
 
                 </div>
-
-                <hr>
 
                 <div class="text-center small opacity-75">
                     &copy; 2026 Mercado Zona Norte. Todos os direitos reservados.
