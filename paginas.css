@@ -1,13 +1,13 @@
 /* ==============================
-   ESTILOS DAS PÁGINAS INTERNAS
+   TEXTO PARA AJUDAR
+   ESTILOS DAS PÁGINAS internos
    (Ofertas e Quem Somos)
-   Complementa o Style.css, usando as mesmas cores do site
+   Complementa o Style.css, usando as mesmas cores do site para seguir o mesmo padrão original
    ============================== */
 
 
-/* ==============================
-   NAVBAR
-   ============================== */
+/*
+   NAVBAR */
 
 .navbar {
     background-color: #1B22A7;
@@ -34,9 +34,7 @@
     height: 24px;
 }
 
-/* ==============================
-   CABEÇALHO DAS PÁGINAS
-   ============================== */
+/* CABEÇALHO DAS PÁGINAS*/
 
 .cabecalho-pagina {
     background-color: #4260E6;
@@ -54,9 +52,8 @@
 }
 
 
-/* ==============================
-   TÍTULOS DE SEÇÃO
-   ============================== */
+/* 
+   TÍTULOS DE SEÇÃO*/
 
 .titulo-secao {
     color: #1B22A7;
@@ -65,9 +62,9 @@
 }
 
 
-/* ==============================
-   OFERTAS
-   ============================== */
+/* =====
+   OFERTAS | AJUSTA A PGNA OFERTAS
+   ====== */
 
 .card-oferta {
     position: relative;
@@ -140,7 +137,7 @@
 
 
 /* ==============================
-   QUEM SOMOS
+   QUEM SOMOS | AJUSTA A PGNA QUEM SOMOS
    ============================== */
 
 .card-valor {
