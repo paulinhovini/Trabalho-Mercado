@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trabalhe Conosco | Mercado Zona Norte</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6f7fb;
+            color: #333;
+        }
+
+        /* Menu */
+
+        nav {
+            background: #1b22a7;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            margin: 0;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cabeçalho */
+
+        header {
+            background: #4260e6;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0 0 15px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        header a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: white;
+            color: #1b22a7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Benefícios */
+
+        .beneficios {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 15px #00000018;
+        }
+
+        .card h3 {
+            color: #1b22a7;
+        }
+
+        /* Formulário */
+
+        .formulario {
+            max-width: 750px;
+            margin: 0 auto 60px;
+            padding: 35px;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 0 8px 25px #00000018;
+        }
+
+        .formulario h2 {
+            color: #1b22a7;
+            text-align: center;
+        }
+
+        .linha {
+            display: flex;
+            gap: 15px;
+        }
+
+        .campo {
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #1b22a7;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4260e6;
+        }
+
+        #mensagem {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #dff7e7;
+            color: #176b38;
+            text-align: center;
+        }
+
+        /* Rodapé */
+
+        footer {
+            background: #1b22a7;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        /* Celular */
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 18px;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .cards,
+            .linha {
+                flex-direction: column;
+            }
+
+            .formulario {
+                margin: 0 15px 50px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Mercado Zona Norte</h2>
+
+        <div>
+            <a href="index.html">Início</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="clube.html">Clube</a>
+            <a href="nossaslojas.html">Lojas</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Trabalhe Conosco</h1>
+
+        <p>
+            Faça parte da equipe do Mercado Zona Norte.
+        </p>
+
+        <a href="#curriculo">Enviar currículo</a>
+    </header>
+
+    <section class="beneficios">
+        <h2>Por que trabalhar conosco?</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Crescimento</h3>
+                <p>
+                    Oportunidades para aprender e crescer na empresa.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Trabalho em equipe</h3>
+                <p>
+                    Um ambiente de respeito e colaboração.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Reconhecimento</h3>
+                <p>
+                    Valorizamos pessoas dedicadas e responsáveis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="formulario" id="curriculo">
+        <h2>Cadastre seu currículo</h2>
+
+        <form id="formTrabalho">
+
+            <div class="linha">
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        placeholder="(21) 99999-9999"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+
+                    <input
+                        type="text"
+                        id="cidade"
+                        placeholder="Digite sua cidade"
+                        required>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="area">Área de interesse</label>
+
+                <select id="area" required>
+                    <option value="">Selecione uma área</option>
+                    <option>Atendimento e Caixa</option>
+                    <option>Reposição e Estoque</option>
+                    <option>Padaria</option>
+                    <option>Açougue</option>
+                    <option>Administrativo</option>
+                    <option>Jovem Aprendiz</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="apresentacao">
+                    Fale um pouco sobre você
+                </label>
+
+                <textarea
+                    id="apresentacao"
+                    rows="4"
+                    placeholder="Conte suas experiências e objetivos"></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="arquivo">Currículo em PDF</label>
+
+                <input
+                    type="file"
+                    id="arquivo"
+                    accept=".pdf"
+                    required>
+            </div>
+
+            <button type="submit">
+                Enviar candidatura
+            </button>
+
+            <div id="mensagem">
+                Currículo enviado com sucesso!
+            </div>
+
+        </form>
+    </section>
+
+    <footer>
+        <a href="sobre.html">Quem Somos</a>
+        <a href="contato.html">Contato</a>
+
+        <p>
+            © 2026 Mercado Zona Norte
+        </p>
+    </footer>
+
+    <script>
+        const formulario = document.getElementById("formTrabalho");
+        const mensagem = document.getElementById("mensagem");
+
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();
+
+            mensagem.style.display = "block";
+            formulario.reset();
+        });
+    </script>
+
+</body>
+
+</html>
