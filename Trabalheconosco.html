@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 
     <title>Trabalhe Conosco | Mercado Zona Norte</title>
 
@@ -19,60 +25,50 @@
             color: #333;
         }
 
-        /* Menu */
+   /* CNAVBAR */
 
-        nav {
-            background: #1b22a7;
-            padding: 22px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.navbar {
+    background-color: #1B22A7;
+}
 
-        nav h2 {
-            margin: 0;
-            color: white;
-        }
+.nav-menu {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin-left: 20px;
-        }
+.nav-menu:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
 
-        /* Cabeçalho */
+            /* CABEÇALHO DAS PÁGINAS */
 
-        header {
-            background: #4260e6;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
+.cabecalho-pagina {
+    background-color: #4260E6;
+    color: #FAFAFA;
+    padding: 48px 0;
+}
 
-        header h1 {
-            font-size: 42px;
-            margin: 0 0 15px;
-        }
+.cabecalho-pagina h1 {
+    font-weight: 700;
+}
 
-        header p {
-            font-size: 18px;
-        }
-
-        header a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: white;
-            color: #1b22a7;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.cabecalho-pagina p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
 
         /* Benefícios */
 
@@ -173,18 +169,27 @@
             text-align: center;
         }
 
-        /* Rodapé */
+        /* Footer */
 
-        footer {
-            background: #1b22a7;
-            color: white;
-            padding: 30px;
-            text-align: center;
+        .footer-site {
+            background-color: #1B22A7;
         }
 
-        footer a {
-            color: white;
-            margin: 0 10px;
+        .footer-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .quem-somos,
+        .social-link {
+            color: #FAFAFA;
+            text-decoration: none;
+        }
+
+        .quem-somos:hover,
+        .social-link:hover {
+            color: #FAFAFA;
+            text-decoration: underline;
         }
 
         /* Celular */
@@ -219,26 +224,73 @@
 
 <body>
 
-    <nav>
-        <h2>Mercado Zona Norte</h2>
+    <!-- MENU -->
+        <nav class="navbar py-4 navbar-expand-md" style="background-color: #1B22A7;">
+            <div class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
+                <div class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
+                    <a class="navbar-brand fw-bold text-light" href="index.html">
+                        Mercado Zona Norte
+                    </a>
+                </div>
 
-        <div>
-            <a href="index.html">Início</a>
-            <a href="ofertas.html">Ofertas</a>
-            <a href="clube.html">Clube</a>
-            <a href="nossaslojas.html">Lojas</a>
-        </div>
-    </nav>
+                <div class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
 
-    <header>
-        <h1>Trabalhe Conosco</h1>
+                    <a class="nav-menu" href="ofertas.html">
+                        <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
+                        <span>Ofertas</span>
+                    </a>
 
-        <p>
-            Faça parte da equipe do Mercado Zona Norte.
-        </p>
+                    <a class="nav-menu" href="clube.html">
+                        <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
+                        <span>Clube</span>
+                    </a>
 
-        <a href="#curriculo">Enviar currículo</a>
-    </header>
+
+                    <a class="nav-menu" href="produtos.html">
+                        <img src="ícones/produtos.svg" alt="Limpeza" class="nav-icon">
+                        <span>Produtos</span>
+                    </a>
+
+                    <a class="nav-menu" href="encarte.html">
+                        <img src="ícones/encarte.svg" alt="Limpeza" class="nav-icon">
+                        <span>Encarte</span>
+                    </a>
+                    
+                    <a class="nav-menu" href="encarte.html">
+                        <img src="ícones/vinho.svg" alt="Limpeza" class="nav-icon">
+                        <span>Adega Zona Norte</span>
+                    </a>
+
+                    <a class="nav-menu" href="dicas.html">
+                        <img src="ícones/dicas.svg" alt="Dicas" class="nav-icon">
+                        <span>Dicas</span>
+                    </a>
+
+                    <a class="nav-menu" href="nossaslojas.html">
+                        <img src="ícones/localização.svg" alt="Login/Cadastro" class="nav-icon">
+                        <span>Lojas</span>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+
+            <!-- CABEÇALHO -->
+        <section class="cabecalho-pagina">
+
+            <div class="container text-center">
+
+                <h1 class="display-5">
+                    Trabalhe Conosco
+                </h1>
+
+                <p>
+                   Faça parte da equipe do Mercado Zona Norte.
+                </p>
+
+            </div>
+
+        </section>
 
     <section class="beneficios">
         <h2>Por que trabalhar conosco?</h2>
@@ -276,21 +328,13 @@
                 <div class="campo">
                     <label for="nome">Nome completo</label>
 
-                    <input
-                        type="text"
-                        id="nome"
-                        placeholder="Digite seu nome"
-                        required>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
                 </div>
 
                 <div class="campo">
                     <label for="email">E-mail</label>
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Digite seu e-mail"
-                        required>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
                 </div>
             </div>
 
@@ -298,21 +342,13 @@
                 <div class="campo">
                     <label for="telefone">Telefone</label>
 
-                    <input
-                        type="tel"
-                        id="telefone"
-                        placeholder="(21) 99999-9999"
-                        required>
+                    <input type="tel" id="telefone" placeholder="(21) 99999-9999" required>
                 </div>
 
                 <div class="campo">
                     <label for="cidade">Cidade</label>
 
-                    <input
-                        type="text"
-                        id="cidade"
-                        placeholder="Digite sua cidade"
-                        required>
+                    <input type="text" id="cidade" placeholder="Digite sua cidade" required>
                 </div>
             </div>
 
@@ -335,20 +371,13 @@
                     Fale um pouco sobre você
                 </label>
 
-                <textarea
-                    id="apresentacao"
-                    rows="4"
-                    placeholder="Conte suas experiências e objetivos"></textarea>
+                <textarea id="apresentacao" rows="4" placeholder="Conte suas experiências e objetivos"></textarea>
             </div>
 
             <div class="campo">
                 <label for="arquivo">Currículo em PDF</label>
 
-                <input
-                    type="file"
-                    id="arquivo"
-                    accept=".pdf"
-                    required>
+                <input type="file" id="arquivo" accept=".pdf" required>
             </div>
 
             <button type="submit">
@@ -362,20 +391,66 @@
         </form>
     </section>
 
-    <footer>
-        <a href="sobre.html">Quem Somos</a>
-        <a href="contato.html">Contato</a>
+    <!-- FOOTER -->
+    <footer class="footer-site text-light py-4 mt-5">
+        <div class="container">
+            <div class="row g-4 align-items-start">
 
-        <p>
-            © 2026 Mercado Zona Norte
-        </p>
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <div class="d-flex flex-column gap-2">
+                        <a href="sobre.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
+                        </a>
+                        <a href="contato.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Contatos</h6>
+                        </a>
+                        <a href="trabalheconosco.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Trabalha Conosco</h6>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Central de Atendimento</h6>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+                        <img src="ícones/telefone.svg" alt="Telefone" class="footer-icon me-2">
+                        <span class="small">(21) 99999-9999</span>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="ícones/email.svg" alt="E-mail" class="footer-icon me-2">
+                        <span class="small">atendimento@mercadozonanorte.com.br</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Acompanhe o Zona Norte nas redes sociais</h6>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="https://www.facebook.com.br" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/facebook.svg" alt="Facebook" class="footer-icon">
+                            <span class="small">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/instagram.svg" alt="Instagram" class="footer-icon">
+                            <span class="small">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center small opacity-75">
+                &copy; 2026 Mercado Zona Norte. Todos os direitos reservados.
+            </div>
+        </div>
     </footer>
 
     <script>
         const formulario = document.getElementById("formTrabalho");
         const mensagem = document.getElementById("mensagem");
 
-        formulario.addEventListener("submit", function(evento) {
+        formulario.addEventListener("submit", function (evento) {
             evento.preventDefault();
 
             mensagem.style.display = "block";
