@@ -26,6 +26,7 @@ body {
     align-items: center;
     gap: 6px;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 .nav-menu:hover {

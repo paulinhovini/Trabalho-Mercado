@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -15,64 +15,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
+<main>
 
-<body>
-   <!-- MENU -->
-        <nav class="navbar py-4 navbar-expand-md" style="background-color: #1B22A7;">
-            <div class="container-fluid d-flex align-items-start justify-content-between flex-column flex-md-row">
-                <div class="d-flex flex-column flex-md-row align-items-center w-100 w-md-auto mb-3 mb-md-0">
+    <body>
+        <!-- MENU -->
+            <nav class="navbar navbar-expand-lg navbar-dark py-3" style="background-color: #1B22A7;">
+                <div class="container-fluid">
                     <a class="navbar-brand fw-bold text-light" href="index.html">
                         Mercado Zona Norte
                     </a>
+
+                    <!-- Mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                        aria-label="Alternar navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="menuPrincipal">
+                        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2">
+
+                            <a class="nav-menu" href="ofertas.html">
+                                <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
+                                <span>Ofertas</span>
+                            </a>
+
+                            <a class="nav-menu" href="clube.html">
+                                <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
+                                <span>Clube</span>
+                            </a>
+
+                            <a class="nav-menu" href="produtos.html">
+                                <img src="ícones/produtos.svg" alt="Produtos" class="nav-icon">
+                                <span>Produtos</span>
+                            </a>
+
+                            <a class="nav-menu" href="encarte.html">
+                                <img src="ícones/encarte.svg" alt="Encarte" class="nav-icon">
+                                <span>Encarte</span>
+                            </a>
+
+                            <a class="nav-menu" href="encarte.html">
+                                <img src="ícones/vinho.svg" alt="Adega" class="nav-icon">
+                                <span>Adega Zona Norte</span>
+                            </a>
+
+                            <a class="nav-menu" href="dicas.html">
+                                <img src="ícones/dicas.svg" alt="Dicas" class="nav-icon">
+                                <span>Dicas</span>
+                            </a>
+
+                            <a class="nav-menu" href="nossaslojas.html">
+                                <img src="ícones/localização.svg" alt="Nossas Lojas" class="nav-icon">
+                                <span>Lojas</span>
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
-
-                    <a class="nav-menu" href="ofertas.html">
-                        <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
-                        <span>Ofertas</span>
-                         </a>
-
-                    <a class="nav-menu" href="clube.html">
-                        <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
-                        <span>Clube</span>
-                    </a>
-                    
-                    <a class="nav-menu" href="cadastro.html">
-                        <img src="ícones/Login.svg" alt="Login/Cadastro" class="nav-icon">
-                        <span>Login/Cadastro</span>
-                         </a>
-    
-                    <a class="nav-menu" href="nossaslojas.html">
-                        <img src="ícones/localização.svg" alt="Login/Cadastro" class="nav-icon">
-                        <span>Lojas</span>
-                    </a>
-
-                </div>
-            </div>
-        </nav>
+            </nav>
 
         <!-- BANNERS -->
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
+
                 <div class="carousel-item active">
                     <img src="Imagens/Banners/banner-1.jpg" class="d-block w-100" alt="Ofertas do Mercado Zona Norte">
+                    </a>
                 </div>
+
                 <div class="carousel-item">
                     <img src="Imagens/Banners/banner-2.jpg" class="d-block w-100" alt="Ofertas especiais">
                 </div>
+
                 <div class="carousel-item">
                     <img src="Imagens/Banners/banner-3.jpg" class="d-block w-100" alt="Promoções do mercado">
+                    </a>
                 </div>
+
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
 
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </button>
 
@@ -86,7 +115,8 @@
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Filé-de-Peito.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Index-Clube/Filé-de-Peito.jpg" class="card-img-top"
+                            alt="Filé de Peito de Frango Sadia Zip 1Kg">
                         <div class="card-body">
                             <h5 class="card-title">Filé de Peito de Frango Sadia Zip 1Kg</h5>
                             <p class="card-text">R$ 17,98</p>
@@ -97,7 +127,8 @@
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Margarina.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Index-Clube/Margarina.jpg" class="card-img-top"
+                            alt="Margarina Qualy C/ Sal 500g">
                         <div class="card-body">
                             <h5 class="card-title">Margarina Qualy <br>C/ Sal 500g</h5>
                             <p class="card-text">R$ 10,49</p>
@@ -108,7 +139,8 @@
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Arroz.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Index-Clube/Arroz.jpg" class="card-img-top"
+                            alt="Arroz Branco Tio João Tipo1 1Kg">
                         <div class="card-body">
                             <h5 class="card-title">Arroz Branco Tio João Tipo1 1Kg</h5>
                             <p class="card-text">R$ 6,11</p>
@@ -119,7 +151,8 @@
 
                 <div class="col-12 col-md-3">
                     <div class="card">
-                        <img src="Imagens/Cards/Feijão.jpg" class="card-img-top" alt="">
+                        <img src="Imagens/Cards/Index-Clube/Feijão.jpg" class="card-img-top"
+                            alt="Feijão Preto Combrasil Tipo1 1Kg">
                         <div class="card-body">
                             <h5 class="card-title">Feijão Preto Combrasil Tipo1 1Kg</h5>
                             <p class="card-text">R$ 8,99</p>
@@ -162,6 +195,10 @@
                                 <h6 class="fw-bold text-uppercase mb-0">Contatos</h6>
                             </a>
 
+                            <a href="trabalheconosco.html" class="quem-somos">
+                                <h6 class="fw-bold text-uppercase mb-0">Trabalhe Conosco</h6>
+                            </a>
+
                         </div>
                     </div>
 
@@ -202,7 +239,7 @@
             </div>
         </footer>
 
-    </main>
+</main>
 
 </body>
 

@@ -1,3 +1,15 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 /* ==============================
    NAVBAR
    ============================== */
@@ -15,6 +27,7 @@
     align-items: center;
     gap: 6px;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 .nav-menu:hover {
@@ -55,12 +68,18 @@
     border: 1px solid rgba(27, 34, 167, 0.15);
     border-top: 4px solid #1B22A7;
     border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
 .container .card .card-title {
     color: #1B22A7;
     font-weight: 700;
     margin-bottom: 16px;
+}
+
+.container .card:hover {
+    transform: translateY(-6px); 
+    box-shadow: 0 6px 16px rgba(27, 34, 167, 0.15); 
 }
 
 .container .card .card-text {
@@ -82,6 +101,7 @@
     border: 1px solid #1B22A7;
     margin-top: 8px;
     transition: background-color 0.2s ease, color 0.2s ease;
+
 }
 
 .container .card .btn-produto:hover {

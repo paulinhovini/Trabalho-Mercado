@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="dicas.css">
+    <title>Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Dicas</title>
+
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+           <!-- MENU -->
+            <nav class="navbar navbar-expand-lg navbar-dark py-3" style="background-color: #1B22A7;">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold text-light" href="index.html">
+                        Mercado Zona Norte
+                    </a>
+
+                    <!-- Mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                        aria-label="Alternar navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="menuPrincipal">
+                        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2">
+
+                            <a class="nav-menu" href="ofertas.html">
+                                <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
+                                <span>Ofertas</span>
+                            </a>
+
+                            <a class="nav-menu" href="clube.html">
+                                <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
+                                <span>Clube</span>
+                            </a>
+
+                            <a class="nav-menu" href="produtos.html">
+                                <img src="ícones/produtos.svg" alt="Produtos" class="nav-icon">
+                                <span>Produtos</span>
+                            </a>
+
+                            <a class="nav-menu" href="encarte.html">
+                                <img src="ícones/encarte.svg" alt="Encarte" class="nav-icon">
+                                <span>Encarte</span>
+                            </a>
+
+                            <a class="nav-menu" href="encarte.html">
+                                <img src="ícones/vinho.svg" alt="Adega" class="nav-icon">
+                                <span>Adega Zona Norte</span>
+                            </a>
+
+                            <a class="nav-menu" href="dicas.html">
+                                <img src="ícones/dicas.svg" alt="Dicas" class="nav-icon">
+                                <span>Dicas</span>
+                            </a>
+
+                            <a class="nav-menu" href="nossaslojas.html">
+                                <img src="ícones/localização.svg" alt="Nossas Lojas" class="nav-icon">
+                                <span>Lojas</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <section class="cabecalho-pagina">
+        <div class="container text-center">
+            <h1 class="display-5">Dicas para o seu dia a dia</h1>
+            <p>Aprenda a economizar nas compras, conservar melhor seus alimentos e preparar receitas incríveis com
+                produtos do nosso mercado.</p>
+        </div>
+    </section>
+
+    <!-- CARDS DE DICAS-->
+    <main class="container my-4 flex-grow-1">
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="Imagens/Dicas/frutas e hortaliças.jpg" class="card-img-top" alt="Hortifrúti e Legumes">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-uppercase text-muted fs-7 fw-bold mb-1">Economia</span>
+                        <h5 class="card-title text-dark mb-2">Fruteira, bancada ou geladeira: <br>onde guardar
+                            frutas e hortaliças?</h5>
+                        <p class="card-text text-secondary mb-4">
+                            Saiba como conservar e higienizar <br>seus alimentos da melhor forma.
+                        </p>
+                        <a href="https://g1.globo.com/pr/campos-gerais-sul/agro-riqueza-campos-gerais/noticia/2024/04/15/fruteira-bancada-ou-geladeira-onde-guardar-frutas-e-hortalicas.ghtml"
+                            target="_blank" e rel="noopener noreferrer" class="btn btn-produto mt-auto">Ler Dica
+                            Completa</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="Imagens/Dicas/Massa fresca caseira.jpg" class="card-img-top" alt="Prato Massa Macarrão">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-uppercase fs-7 fw-bold mb-1" style="color: #1B22A7;">Receitas</span>
+                        <h5 class="card-title text-dark mb-2">Massa fresca caseira com 2 ingredientes
+                        </h5>
+                        <p class="card-text text-secondary mb-4">
+                            Uma receita pronta em menos de 15 minutos existe (e você não precisa de nenhum utensílio
+                            especial)
+                        </p>
+                        <a href="https://www.tudogostoso.com.br/noticias/massa-fresca-caseira-com-2-ingredientes-e-pronta-em-menos-de-15-minutos-existe-e-voce-nao-precisa-de-nenhum-utensilio-especial-a9307.htm"
+                            target="_blank" e rel="noopener noreferrer" class="btn btn-produto mt-auto">Ver
+                            Receita</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="Imagens/Dicas/Lista de compra.jpg" class="card-img-top" alt="Despensa Organizada">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-uppercase fs-7 fw-bold mb-1" style="color: #1B22A7;">Organização</span>
+                        <h5 class="card-title text-dark mb-2">Lista de compras de supermercado: entenda como
+                            organizar a sua
+                        </h5>
+                        <p class="card-text text-secondary mb-4">
+                            Como montar uma lista de compras completa e economizar no supermercado!
+                        </p>
+                        <a href="https://institucional.ifood.com.br/consumidores/lista-de-compras-de-supermercado/"
+                            target="_blank" e rel="noopener noreferrer" class="btn btn-produto mt-auto">Ler Dica
+                            Completa</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="Imagens/Dicas/Aproveitamento integral dos alimentos.jpg" class="card-img-top"
+                        alt="Hortaliças e Verduras">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-uppercase fs-7 fw-bold mb-1" style="color: #1B22A7;">Sustentabilidade</span>
+                        <h5 class="card-title text-dark mb-2">Conheça o reaproveitamento de alimentos, uma
+                            alternativa ao desperdício</h5>
+                        <p class="card-text text-secondary mb-4">
+                            Descubra como reaproveitar alimentos, <br>reduzir o desperdício e criar receitas
+                            sustentáveis.
+                        </p>
+                        <a href="https://pactocontrafome.org/reaproveitamento-alimentos/?gad_source=1&gad_campaignid=23822864820&gbraid=0AAAAA-VWYNePl_UOzEYEFMsan45vNyilx&gclid=CjwKCAjw_eLVBhBEEiwAeaYZfK7EygD4RuY6L-ajK6NAEZJeG2fcCD1IWu5LZVJ2zRTlCkQezU3Q7xoCr9gQAvD_BwE"
+                            target="_blank" e rel="noopener noreferrer" class="btn btn-produto mt-auto">Ler Dica
+                            Completa</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card h-100">
+                    <img src="Imagens/Dicas/Picanha de forno.jpg" class="card-img-top" alt="Geladeira e Armazenamento">
+
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-uppercase fs-7 fw-bold mb-1" style="color: #1B22A7;">
+                            Receitas
+                        </span>
+                        <h5 class="card-title text-dark mb-2">Picanha ao Forno com Sal Grosso</h5>
+                        <p class="card-text text-secondary mb-4">
+                            Uma receita suculenta e fácil para preparar a picanha com muito sabor.
+                        </p>
+                        <a href="https://www.tudogostoso.com.br/receita/249-picanha-ao-forno-com-sal-grosso.html"
+                            target="_blank" e rel="noopener noreferrer" class="btn btn-produto mt-auto">Ver
+                            Receita</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=800&auto=format&fit=crop"
+                        class="card-img-top" alt="Bebidas e Vinhos">
+                    <div class="card-body d-flex flex-column">
+                        <span class="text-uppercase fs-7 fw-bold mb-1" style="color: #1B22A7;">Bebidas</span>
+                        <h5 class="card-title text-dark mb-2">Como gelar bebidas rápido? Confira 3 truques fáceis!
+                        </h5>
+                        <p class="card-text text-secondary mb-4">
+                            Aprenda dicas simples para deixar suas bebidas geladas em poucos minutos.
+                        </p>
+                        <a href="https://www.terra.com.br/vida-e-estilo/degusta/como-gelar-bebidas-rapido-confira-3-truques-faceis,84ce4535323c7812d33f2a5da5c0f282eht2bb1e.html"
+                            target="_blank" e rel="noopener noreferrer" class="btn btn-produto mt-auto">Ler Dica
+                            Completa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-site text-light py-4 mt-5">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <div class="d-flex flex-column gap-2">
+                        <a href="sobre.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
+                        </a>
+                        <a href="contato.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Contatos</h6>
+                        </a>
+                        <a href="trabalheconosco.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Trabalha Conosco</h6>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Central de Atendimento</h6>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+                        <img src="ícones/telefone.svg" alt="Telefone" class="footer-icon me-2">
+                        <span class="small">(21) 99999-9999</span>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="ícones/email.svg" alt="E-mail" class="footer-icon me-2">
+                        <span class="small">atendimento@mercadozonanorte.com.br</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Acompanhe o Zona Norte nas redes sociais</h6>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="https://www.facebook.com.br" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/facebook.svg" alt="Facebook" class="footer-icon">
+                            <span class="small">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/instagram.svg" alt="Instagram" class="footer-icon">
+                            <span class="small">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center small opacity-75">
+                &copy; 2026 Mercado Zona Norte. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

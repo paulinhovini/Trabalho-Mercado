@@ -5,6 +5,16 @@
    ============================== */
 
 
+   * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 /* ==============================
    NAVBAR
    ============================== */
@@ -75,16 +85,18 @@
     height: 100%;
 }
 
-.selo-desconto {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: #E53935;
-    color: #FAFAFA;
-    font-weight: 700;
-    padding: 6px 10px;
-    border-radius: 10px;
+.card-oferta .card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 12px;
 }
+
+.card-oferta .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 .preco-antigo {
     color: #6C757D;
@@ -164,6 +176,31 @@
    ============================== */
 
 .footer-site {
+    background-color: #1B22A7;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.quem-somos,
+.social-link {
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+.quem-somos:hover,
+.social-link:hover {
+    color: #FAFAFA;
+    text-decoration: underline;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+ .footer-site {
     background-color: #1B22A7;
 }
 
