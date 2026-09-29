@@ -2,6 +2,16 @@
    Usa as mesmas cores do site
 */
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 /* ==============================
    NAVBAR
    ============================== */
@@ -19,6 +29,7 @@
     align-items: center;
     gap: 6px;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 .nav-menu:hover {
@@ -30,6 +41,7 @@
     width: 24px;
     height: 24px;
 }
+
 /* ==============================
    CABEÇALHO DAS PÁGINAS
    ============================== */
@@ -81,6 +93,57 @@
     font-weight: 700;
 }
 
+/* ==============================
+   ÍCONE DOS CARDS COM HOVER
+   ============================== */
+
+.icone-hover-card {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+}
+
+.icone-hover-card img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.icone-hover-card .icone-normal,
+.icone-hover-card .icone-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icone-hover-card .icone-hover {
+    opacity: 0;
+}
+
+.card-categoria:hover .icone-hover-card .icone-normal {
+    opacity: 0;
+}
+
+.card-categoria:hover .icone-hover-card .icone-hover {
+    opacity: 1;
+}
+
+.selo-membro {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background-color: #1B22A7;
+    color: #FAFAFA;
+
+    font-weight: 700;
+    font-size: 0.85rem;
+
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
 .btn-produto {
     background-color: #1B22A7;
     color: #FAFAFA;
@@ -96,22 +159,6 @@
     background-color: #4260E6;
     color: #FAFAFA;
     border-color: #4260E6;
-}
-
-
-.selo-membro {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-
-    background-color: #1B22A7;
-    color: #FAFAFA;
-
-    font-weight: 700;
-    font-size: 0.85rem;
-
-    padding: 6px 10px;
-    border-radius: 10px;
 }
 
 
@@ -198,6 +245,28 @@
     border-radius: 10px;
 
     padding: 24px;
+}
+
+.caixa-clube {
+    background-color: #1B22A7;
+    color: #FAFAFA;
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.btn-clube {
+    background-color: #FAFAFA;
+    color: #1B22A7;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 12px 24px;
+    border: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-clube:hover {
+    background-color: #4260E6;
+    color: #FAFAFA;
 }
 
 
