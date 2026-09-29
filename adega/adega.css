@@ -1,0 +1,128 @@
+/* ==============================
+   ADEGA ZONA NORTE - adega.css
+   (paleta igual à do projeto: azul #1B22A7 + destaque amarelo)
+   ============================== */
+
+:root {
+    --azul: #1B22A7;
+    --azul-hover: #4260E6;
+    --amarelo: #F2B90F;
+    --branco: #FAFAFA;
+    --escuro: #12142e;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar { background-color: var(--azul); }
+.navbar-brand { display: flex; flex-direction: column; line-height: 1; color: var(--branco); }
+.navbar-brand strong { font-size: 1.4rem; letter-spacing: 2px; }
+.navbar-brand span { font-size: .7rem; letter-spacing: 3px; color: var(--amarelo); }
+.navbar .nav-link {
+    color: var(--branco);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 8px 15px;
+}
+.navbar .nav-link:hover { background-color: var(--azul-hover); }
+
+/* BANNER */
+.banner {
+    background: linear-gradient(135deg, var(--escuro) 0%, var(--azul) 100%);
+    color: var(--branco);
+    text-align: center;
+    padding: 110px 20px;
+}
+.banner h1 { font-weight: 800; font-size: clamp(2rem, 6vw, 3.5rem); }
+.banner p { font-size: 1.15rem; max-width: 520px; margin: 15px auto 30px; }
+
+.btn-ofertas {
+    background-color: var(--amarelo);
+    color: #111;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 12px 32px;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.btn-ofertas:hover { background-color: #ffd23f; color: #111; transform: translateY(-2px); }
+
+/* TÍTULOS DE SEÇÃO */
+.titulo-secao { text-align: center; margin-bottom: 40px; }
+.titulo-secao h2 { font-weight: 800; color: var(--azul); }
+.titulo-secao p { color: #666; margin: 0; }
+
+/* OFERTAS / PRODUTOS */
+.ofertas { padding: 70px 12px; }
+
+.produto-card {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease;
+}
+.produto-card:hover { transform: translateY(-4px); }
+
+.produto-imagem { aspect-ratio: 2 / 3; overflow: hidden; }
+.produto-imagem img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.produto-info { padding: 16px; text-align: center; margin-top: auto; }
+.produto-info h3 { font-size: 1.05rem; font-weight: 600; }
+.preco { font-weight: 700; font-size: 1.4rem; color: var(--azul); margin-bottom: 4px; }
+
+.btn-produto {
+    background-color: var(--azul);
+    color: var(--branco);
+    font-weight: 600;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid var(--azul);
+    margin-top: 8px;
+    transition: background-color .2s ease, color .2s ease;
+}
+.btn-produto:hover {
+    background-color: var(--azul-hover);
+    color: var(--branco);
+    border-color: var(--azul-hover);
+}
+
+/* CATEGORIAS */
+.categorias { background-color: #eef1ff; padding: 70px 0; }
+.categoria {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    height: 100%;
+    border-bottom: 4px solid var(--amarelo);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+}
+.categoria h3 { font-weight: 700; color: var(--azul); }
+.categoria p { margin: 0; color: #555; }
+
+/* SOBRE */
+.sobre { padding: 70px 0; }
+.sobre h2 { font-weight: 800; color: var(--azul); }
+.sobre-destaque {
+    background: var(--azul);
+    color: var(--branco);
+    border-radius: 14px;
+    padding: 40px 20px;
+}
+.sobre-destaque span { font-size: 3rem; }
+.sobre-destaque p { margin: 0; }
+
+/* FOOTER */
+footer#contato { background-color: var(--azul); color: var(--branco); padding: 50px 0 20px; }
+footer#contato hr { border-color: rgba(255, 255, 255, .3); }
+.copyright { text-align: center; margin: 0; font-size: .9rem; }

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adega Zona Norte</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <!-- CSS da Adega (mesma pasta deste arquivo) -->
+    <link rel="stylesheet" href="adega.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="#inicio">
+                <strong>ADEGA</strong>
+                <span>ZONA NORTE</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- Ajuste o href abaixo para a página inicial do seu projeto -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Mercado</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ofertas">Ofertas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- BANNER PRINCIPAL -->
+    <section id="inicio" class="banner">
+        <div class="banner-content">
+
+            <h1>Adega Zona Norte</h1>
+
+            <p>Bebidas, ofertas e tudo para deixar seu momento ainda melhor.</p>
+
+            <a href="#ofertas" class="btn btn-ofertas">VER OFERTAS</a>
+
+        </div>
+    </section>
+
+
+    <!-- OFERTAS -->
+    <section id="ofertas" class="container ofertas">
+
+        <div class="titulo-secao">
+            <h2>Ofertas Especiais</h2>
+            <p>Confira nossas principais promoções</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- PRODUTO 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="img/cerveja.jpg" alt="Cerveja Heineken 350ml">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Cerveja Heineken 350ml</h3>
+                        <p class="preco">R$ 5,99</p>
+                        <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTO 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="img/vinho.jpg" alt="Vinho Tinto 750ml">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Vinho Tinto 750ml</h3>
+                        <p class="preco">R$ 29,90</p>
+                        <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTO 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="img/whisky.jpg" alt="Whisky 1L">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Whisky 1L</h3>
+                        <p class="preco">R$ 89,90</p>
+                        <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTO 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="img/energetico.jpg" alt="Energético 473ml">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Energético 473ml</h3>
+                        <p class="preco">R$ 9,99</p>
+                        <a href="#" class="btn btn-produto">VER PRODUTO</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CATEGORIAS (destino do link "Produtos") -->
+    <section id="produtos" class="categorias">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <h2>Encontre sua bebida</h2>
+                <p>Escolha uma categoria</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <div class="categoria">
+                        <h3>🍺 Cervejas</h3>
+                        <p>Diversas marcas e opções para todos os momentos.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="categoria">
+                        <h3>🍷 Vinhos</h3>
+                        <p>Tintos, brancos e opções para acompanhar sua refeição.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="categoria">
+                        <h3>🥃 Destilados</h3>
+                        <p>Whisky, vodka, gin e muito mais.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SOBRE -->
+    <section class="sobre">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <div class="col-md-6">
+                    <h2>Adega Zona Norte</h2>
+                    <p>
+                        A Adega Zona Norte oferece uma variedade de bebidas
+                        para você aproveitar todos os momentos.
+                    </p>
+                    <p>
+                        Trabalhamos com produtos selecionados, ofertas
+                        especiais e atendimento de qualidade.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <div class="sobre-destaque">
+                        <span>🍷</span>
+                        <h3>Qualidade e variedade</h3>
+                        <p>Tudo em um só lugar.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTATO -->
+    <footer id="contato">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <h3>Adega Zona Norte</h3>
+                    <p>Sua adega de confiança.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <h5>Central de Atendimento</h5>
+                    <p>📞 (21) 99999-9999</p>
+                    <p>✉️ atendimento@adegazonanorte.com.br</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">© 2026 Adega Zona Norte. Todos os direitos reservados.</p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
