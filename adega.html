@@ -5,73 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="adega.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
     <title>Adega Zona Norte</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-
-    <!-- CSS da Adega (mesma pasta deste arquivo) -->
-    <link rel="stylesheet" href="adega.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-
-            <a class="navbar-brand" href="#inicio">
-                <strong>ADEGA</strong>
-                <span>ZONA NORTE</span>
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3" style="background-color: #1B22A7;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-light" href="index.html">
+                Mercado Zona Norte
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+            <!-- Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="menuPrincipal">
+                <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2">
 
-                    <!-- Ajuste o href abaixo para a página inicial do seu projeto -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Mercado</a>
-                    </li>
+                    <a class="nav-menu" href="ofertas.html">
+                        <img src="ícones/Cupom.svg" alt="Ofertas" class="nav-icon">
+                        <span>Ofertas</span>
+                    </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Início</a>
-                    </li>
+                    <a class="nav-menu" href="clube.html">
+                        <img src="ícones/Clube.svg" alt="Clube" class="nav-icon">
+                        <span>Clube</span>
+                    </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ofertas">Ofertas</a>
-                    </li>
+                    <a class="nav-menu" href="produtos.html">
+                        <img src="ícones/produtos.svg" alt="Produtos" class="nav-icon">
+                        <span>Produtos</span>
+                    </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#produtos">Produtos</a>
-                    </li>
+                    <a class="nav-menu" href="encarte.html">
+                        <img src="ícones/encarte.svg" alt="Encarte" class="nav-icon">
+                        <span>Encarte</span>
+                    </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
-                    </li>
+                    <a class="nav-menu" href="adega.html">
+                        <img src="ícones/vinho.svg" alt="Adega" class="nav-icon">
+                        <span>Adega Zona Norte</span>
+                    </a>
 
-                </ul>
+                    <a class="nav-menu" href="dicas.html">
+                        <img src="ícones/dicas.svg" alt="Dicas" class="nav-icon">
+                        <span>Dicas</span>
+                    </a>
+
+                    <a class="nav-menu" href="nossaslojas.html">
+                        <img src="ícones/localização.svg" alt="Nossas Lojas" class="nav-icon">
+                        <span>Lojas</span>
+                    </a>
+
+                </div>
             </div>
         </div>
     </nav>
 
-
-    <!-- BANNER PRINCIPAL -->
-    <section id="inicio" class="banner">
-        <div class="banner-content">
-
-            <h1>Adega Zona Norte</h1>
-
+    <!-- CABEÇALHO DA PÁGINA -->
+    <section class="cabecalho-pagina">
+        <div class="container text-center">
+            <h1 class="display-5">Adega Zona Norte</h1>
             <p>Bebidas, ofertas e tudo para deixar seu momento ainda melhor.</p>
-
-            <a href="#ofertas" class="btn btn-ofertas">VER OFERTAS</a>
-
         </div>
     </section>
 
@@ -90,7 +94,7 @@
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        <img src="img/cerveja.jpg" alt="Cerveja Heineken 350ml">
+                        <img src="Imagens/Adega/cerveja.jpg" alt="Cerveja Heineken 350ml">
                     </div>
                     <div class="produto-info">
                         <h3>Cerveja Heineken 350ml</h3>
@@ -104,7 +108,7 @@
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        <img src="img/vinho.jpg" alt="Vinho Tinto 750ml">
+                        <img src="Imagens/Adega/vinho.jpg" alt="Vinho Tinto 750ml">
                     </div>
                     <div class="produto-info">
                         <h3>Vinho Tinto 750ml</h3>
@@ -118,7 +122,7 @@
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        <img src="img/whisky.jpg" alt="Whisky 1L">
+                        <img src="Imagens/Adega/whisky.jpg" alt="Whisky 1L">
                     </div>
                     <div class="produto-info">
                         <h3>Whisky 1L</h3>
@@ -132,7 +136,7 @@
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        <img src="img/energetico.jpg" alt="Energético 473ml">
+                        <img src="Imagens/Adega/energetico.jpg" alt="Energético 473ml">
                     </div>
                     <div class="produto-info">
                         <h3>Energético 473ml</h3>
@@ -159,21 +163,30 @@
 
                 <div class="col-12 col-md-4">
                     <div class="categoria">
-                        <h3>🍺 Cervejas</h3>
+                        <h3 class="d-flex justify-content-center gap-2">
+                            <img src="ícones/cervejas.svg" alt="" class="produto-icon">
+                            <span>Cervejas</span>
+                        </h3>
                         <p>Diversas marcas e opções para todos os momentos.</p>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-4">
                     <div class="categoria">
-                        <h3>🍷 Vinhos</h3>
+                        <h3 class="d-flex justify-content-center gap-2">
+                            <img src="ícones/vinhos.svg" alt="" class="produto-icon">
+                            <span>Vinhos</span>
+                        </h3>
                         <p>Tintos, brancos e opções para acompanhar sua refeição.</p>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-4">
                     <div class="categoria">
-                        <h3>🥃 Destilados</h3>
+                        <h3 class="d-flex justify-content-center gap-2">
+                            <img src="ícones/whisky.svg" alt="" class="produto-icon">
+                            <span>Destilados</span>
+                        </h3>
                         <p>Whisky, vodka, gin e muito mais.</p>
                     </div>
                 </div>
@@ -203,7 +216,7 @@
 
                 <div class="col-md-6 text-center">
                     <div class="sobre-destaque">
-                        <span>🍷</span>
+                       <img src="ícones/vinho.svg" alt="" class="produto-vinho-icon">
                         <h3>Qualidade e variedade</h3>
                         <p>Tudo em um só lugar.</p>
                     </div>
@@ -214,29 +227,62 @@
     </section>
 
 
-    <!-- CONTATO -->
-    <footer id="contato">
+    <!-- FOOTER -->
+    <footer class="footer-site text-light py-4 mt-5">
         <div class="container">
+            <div class="row g-4 align-items-start">
 
-            <div class="row">
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <div class="d-flex flex-column gap-2">
+                        <a href="sobre.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Quem Somos</h6>
+                        </a>
 
-                <div class="col-md-6">
-                    <h3>Adega Zona Norte</h3>
-                    <p>Sua adega de confiança.</p>
+                        <a href="contato.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Contatos</h6>
+                        </a>
+
+                        <a href="trabalheconosco.html" class="quem-somos">
+                            <h6 class="fw-bold text-uppercase mb-0">Trabalhe Conosco</h6>
+                        </a>
+
+                    </div>
                 </div>
 
-                <div class="col-md-6">
-                    <h5>Central de Atendimento</h5>
-                    <p>📞 (21) 99999-9999</p>
-                    <p>✉️ atendimento@adegazonanorte.com.br</p>
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Central de Atendimento</h6>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+                        <img src="ícones/telefone.svg" alt="Telefone" class="footer-icon me-2">
+                        <span class="small">(21) 99999-9999</span>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="ícones/email.svg" alt="E-mail" class="footer-icon me-2">
+                        <span class="small">atendimento@mercadozonanorte.com.br</span>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <h6 class="fw-bold text-uppercase mb-2">Acompanhe o Zona Norte nas redes sociais</h6>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="https://www.facebook.com.br" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/facebook.svg" alt="Facebook" class="footer-icon">
+                            <span class="small">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link d-flex align-items-center gap-2">
+                            <img src="ícones/instagram.svg" alt="Instagram" class="footer-icon">
+                            <span class="small">Instagram</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
 
-            <hr>
-
-            <p class="copyright">© 2026 Adega Zona Norte. Todos os direitos reservados.</p>
-
+            <div class="text-center small opacity-75">
+                &copy; 2026 Mercado Zona Norte. Todos os direitos reservados.
+            </div>
         </div>
     </footer>
 
